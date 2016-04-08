@@ -5,19 +5,18 @@
         <title>Soul Food Café Mission</title>
 
         <!-- SFCM -->
-        <link rel="shortcut icon" href="http://www.soulfoodcafemission.org/misc/favicon.ico" type="image/x-icon" />
-        <link type="text/css" rel="stylesheet" media="all" href="sites/all/modules/nice_menus/nice_menus.css%3F8.css" />
-        <link type="text/css" rel="stylesheet" media="all" href="sites/all/themes/soulfood/css/nice_menus_custom.css%3F8.css" />
-        <link type="text/css" rel="stylesheet" media="all" href="sites/all/themes/omega/css/960.css%3F8.css" />
-        <link type="text/css" rel="stylesheet" media="all" href="sites/all/themes/omega/css/reset.css%3F8.css" />
-        <link type="text/css" rel="stylesheet" media="all" href="sites/all/themes/omega/css/text.css%3F8.css" />
-        <link type="text/css" rel="stylesheet" media="all" href="sites/all/themes/omega/css/regions.css%3F8.css" />
-        <link type="text/css" rel="stylesheet" media="all" href="sites/all/themes/omega/css/defaults.css%3F8.css" />
-        <link type="text/css" rel="stylesheet" media="all" href="sites/all/themes/omega/css/custom.css%3F8.css" />
-        <link type="text/css" rel="stylesheet" media="all" href="sites/all/themes/soulfood/css/style.css%3F8.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="{{ url_for('static', filename='nice_menus.css?8.css') }}" />
+        <link type="text/css" rel="stylesheet" media="all" href="{{ url_for('static', filename='nice_menus_custom.css?8.css') }}" />
+        <link type="text/css" rel="stylesheet" media="all" href="{{ url_for('static', filename='960.css?8.css') }}" />
+        <link type="text/css" rel="stylesheet" media="all" href="{{ url_for('static', filename='reset.css?8.css') }}" />
+        <link type="text/css" rel="stylesheet" media="all" href="{{ url_for('static', filename='text.css?8.css') }} " />
+        <link type="text/css" rel="stylesheet" media="all" href="{{ url_for('static', filename='regions.css?8.css') }}" />
+        <link type="text/css" rel="stylesheet" media="all" href="{{ url_for('static', filename='defaults.css?8.css') }} " />
+        <link type="text/css" rel="stylesheet" media="all" href="{{ url_for('static', filename='custom.css?8.css') }} " />
+        <link type="text/css" rel="stylesheet" media="all" href="{{ url_for('static', filename='style.css?8.css') }} " />
 
         <!-- Hendrix -->
-        <link type="text/css" rel="stylesheet" href="css/site.css" />
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/site.css') }}" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
         <script>
         $(document).ready( function () {
@@ -29,8 +28,6 @@
         });
         </script>
 
-        <link type="text/css" rel="stylesheet" href="css/login.css" />
-
     </head>
 
     <body class="front node-type-page no-sidebars">
@@ -38,7 +35,7 @@
             <div id="site-header" class="container-16 clearfix">
                 <div id="branding" class="grid-4">
                     <div id="logo"> 
-                        <a href="index.html" class="active"><img src="sites/all/themes/soulfood/logo.png" alt="Soul Food Café Mission" title="Soul Food Café Mission" width="583" height="91" /></a>        
+                        <a href="index" class="active"><img src="{{ url_for('static', 'logo.png') }}" alt="Soul Food Café Mission" title="Soul Food Café Mission" width="583" height="91" /></a>        
                     </div>
                 </div>
                 <div><ul class="nice-menu nice-menu-down" id="nice-menu-0"><li class="menu-311 menu-path-front active-trail first  odd "><a href="#" title="" class="active">home</a></li>
@@ -50,7 +47,7 @@
                         <li class="menu-650 menu-path-node-15 odd "><a href="#" title="The Process">The Process</a></li>
                         <li class="menu-652 menu-path-node-20 even "><a href="#" title="Donate">Donate</a></li>
                         <li class="menu-753 menu-path-node-52 odd "><a href="#" title="Partner&#039;s Plan">Partner</a></li>
-                        <li class="menu-800 menu-path-node-10 even last"><a href="login.html">Login</a></li>
+                        <li class="menu-800 menu-path-node-10 even last"><a href="login">Login</a></li>
                     </ul>
                 </div>
             </div>
@@ -65,22 +62,11 @@
             <div id="main-content-container" class="container-16 clearfix">
                 <div id="main-wrapper" class="column grid-16">
                     <div id="main-inner-wrapper">
-                        <h2 class="title" id="page-title">Create Account</h2>
+                        <h2 class="title" id="page-title">{{ page_title }}</h2>
                         <div id="main-content">
-                            <div>
-                                <form action="login.html" method="get" name="register">
-                                    <h4>Email Address</h4>
-                                    <input type="text" name="email">
-                                    <h4>Username</h4>
-                                    <input type="text" name="username">
-                                    <h4>Password</h4>
-                                    <input type="password" name="password">
-                                    <h4>Confirm Password</h4>
-                                    <input type="password" name="password_confirm">
-                                    <input type="submit" name="Register" id="submit_info"> 
-                                </form>
-                            </div>	
+                            {% block body %}{% endblock %}
                         </div>
+
                     </div> 
                 </div>
             </div>
