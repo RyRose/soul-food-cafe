@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Soul Food Café Mission</title>
+
+        <!-- SFCM -->
+        <link rel="shortcut icon" href="http://www.soulfoodcafemission.org/misc/favicon.ico" type="image/x-icon" />
+        <link type="text/css" rel="stylesheet" media="all" href="sites/all/modules/nice_menus/nice_menus.css%3F8.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="sites/all/themes/soulfood/css/nice_menus_custom.css%3F8.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="sites/all/themes/omega/css/960.css%3F8.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="sites/all/themes/omega/css/reset.css%3F8.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="sites/all/themes/omega/css/text.css%3F8.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="sites/all/themes/omega/css/regions.css%3F8.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="sites/all/themes/omega/css/defaults.css%3F8.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="sites/all/themes/omega/css/custom.css%3F8.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="sites/all/themes/soulfood/css/style.css%3F8.css" />
+
+        <!-- Hendrix -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet" href="css/site.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script>
+        $(document).ready( function () {
+            $("#loginout p a").css("opacity", 0);
+            $("#loginout").hover(
+            function () {$("#loginout p a").fadeTo(500, 1);},
+            function () {$("#loginout p a").fadeTo(500, 0);}
+            );
+            $("#export_table").click( exportData );
+        });
+
+        function exportData () {
+            alert("data exported");
+        }
+        </script>
+
+    </head>
+
+    <body class="front node-type-page no-sidebars">
+        <div id="page" class="clearfix">
+            <div id="site-header" class="container-16 clearfix">
+                <div id="branding" class="grid-4">
+                    <div id="logo"> 
+                        <a href="index.html" class="active"><img src="sites/all/themes/soulfood/logo.png" alt="Soul Food Café Mission" title="Soul Food Café Mission" width="583" height="91" /></a>        
+                    </div>
+                </div>
+                <div><ul class="nice-menu nice-menu-down" id="nice-menu-0"><li class="menu-311 menu-path-front active-trail first  odd "><a href="#" title="" class="active">home</a></li>
+                        <li class="menu-336 menu-path-node-2 even "><a href="#" title="About" class="active">About</a></li>
+                        <li class="menu-403 menu-path-staff odd "><a href="#">staff</a></li>
+                        <li class="menu-551 menu-path-node-11 even "><a href="#" title="SFCM Building Fund">Building Fund</a></li>
+                        <li class="menu-550 menu-path-node-10 odd "><a href="#" title="Soul Food Cafe Mission Schedule">Schedule</a></li>
+                        <li class="menu-496 menu-path-node-9 even "><a href="#" title="Contact Us">Contact Us</a></li>
+                        <li class="menu-650 menu-path-node-15 odd "><a href="#" title="The Process">The Process</a></li>
+                        <li class="menu-652 menu-path-node-20 even "><a href="#" title="Donate">Donate</a></li>
+                        <li class="menu-753 menu-path-node-52 odd "><a href="#" title="Partner&#039;s Plan">Partner</a></li>
+                        <li class="menu-800 menu-path-node-10 even last"><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="preface-wrapper" class="container-16 clearfix">
+                <div id="preface-first" class="preface grid-7">
+                    <div id="block-block-1" class="block block-block">
+                        <div class="content">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="main-content-container" class="container-16 clearfix">
+                <div id="main-wrapper" class="column grid-16">
+                    <div id="main-inner-wrapper">
+                        <h2 class="title" id="page-title">Donations</h2>
+                        <div id="main-content">
+                            <div id="node-page-2" >
+
+                                <strong>Week:</strong>
+                                <select>
+                                    <option value="1">3/9/16 - 3/16/16</option>
+                                    <option value="2">3/16/16 - 3/23/16</option>
+                                    <option value="3">3/23/16 - 3/30/16</option>
+                                    <option value="4">3/30/16 - 4/5/16</option>
+                                </select>
+
+                                <a id="export_table" href="#">Export data to Excel</a>
+
+                                <table class="table table-striped" >
+                                    <thead> 
+                                        <tr>        
+                                            <th>Donor</th>
+                                            <th>Header 2</th>
+                                            <th>Header 3</th>
+                                            <th>Header 4</th>
+                                            <th>Header 5</th>
+                                            <th>Header 6</th>
+                                            <th>Header 7</th>
+                                            <th>Header 8</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>a</td>
+                                            <td>1<br></td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                            <td>5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                        </tr>
+                                        <tr>
+                                            <td>b</td>
+                                            <td>8</td>
+                                            <td>9</td>
+                                            <td>10</td>
+                                            <td>11</td>
+                                            <td>12</td>
+                                            <td>13</td>
+                                            <td>14</td>
+                                        </tr>
+                                        <tr>
+                                            <td>c</td>
+                                            <td>15</td>
+                                            <td>16</td>
+                                            <td>17</td>
+                                            <td>18</td>
+                                            <td>19</td>
+                                            <td>20</td>
+                                            <td>21</td>
+                                        </tr>
+                                        <tr>
+                                            <td>d</td>
+                                            <td>22</td>
+                                            <td>23</td>
+                                            <td>24</td>
+                                            <td>25</td>
+                                            <td>26</td>
+                                            <td>27</td>
+                                            <td>28</td>
+                                        </tr>
+                                        <tr>
+                                            <td>e</td>
+                                            <td>29</td>
+                                            <td>30</td>
+                                            <td>31</td>
+                                            <td>32</td>
+                                            <td>33</td>
+                                            <td>34</td>
+                                            <td>35</td>
+                                        </tr>
+                                        <tr>
+                                            <td>f</td>
+                                            <td>36</td>
+                                            <td>37</td>
+                                            <td>38</td>
+                                            <td>39</td>
+                                            <td>40</td>
+                                            <td>41</td>
+                                            <td>42</td>
+                                        </tr>
+                                        <tr>
+                                            <td>g</td>
+                                            <td>43</td>
+                                            <td>44</td>
+                                            <td>45</td>
+                                            <td>46</td>
+                                            <td>47</td>
+                                            <td>48</td>
+                                            <td>49</td>
+                                        </tr>
+                                        <tr>
+                                            <td>h</td>
+                                            <td>50</td>
+                                            <td>51</td>
+                                            <td>52</td>
+                                            <td>53</td>
+                                            <td>54</td>
+                                            <td>55</td>
+                                            <td>56</td>
+                                        </tr>
+                                        <tbody>
+                                </table>
+
+                            </div>	
+                        </div>
+
+                    </div> 
+                </div>
+            </div>
+            <div id="bottomRunner">
+                <div id="loginout"><p><a href="#">Admin</a></p></div></div> 
+        </div>
+    </body>
+</html>
