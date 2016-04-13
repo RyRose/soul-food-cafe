@@ -17,8 +17,7 @@ def display_register():
 
 @app.route("/donations")
 def display_donations():
-    return "donations"
+    return render_template("donations.html", page_title="Donations")
 
 if __name__ == "__main__":
     app.run()
-
