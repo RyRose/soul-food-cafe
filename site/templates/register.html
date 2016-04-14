@@ -1,0 +1,13 @@
+{% extends "main_layout.html" %}
+{% block body %}<form action="login" method="get" name="register">
+    <h4>Email Address</h4>
+    <input type="text" name="email">
+    <h4>Username</h4>
+    <input type="text" name="username">
+    <h4>Password</h4>
+    <input type="password" name="password">
+    <h4>Confirm Password</h4>
+    <input type="password" name="password_confirm">
+    <input type="submit" name="Register" id="submit_info"> 
+</form>
+{% endblock %}
