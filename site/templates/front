@@ -1,2 +1,0 @@
-{% extends "main_layout.html" %}
-{% block body %}
