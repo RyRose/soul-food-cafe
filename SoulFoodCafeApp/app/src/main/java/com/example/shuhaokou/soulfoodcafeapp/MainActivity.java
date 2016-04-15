@@ -7,6 +7,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -22,9 +24,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+
+
+
     public void switcher(View v){
         Intent intent = new Intent(MainActivity.this, scanList.class);
         startActivity(intent);
+
     }
 
 

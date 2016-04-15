@@ -15,9 +15,50 @@
     <EditText
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:id="@+id/editText3"
+        android:id="@+id/DonationsEditText"
         android:text="Donations"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Donor"
+        android:id="@+id/DonorTextView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="BarCodeID"
+        android:id="@+id/BarCodeIDView"
+        android:layout_below="@+id/DonationsEditText"
+        android:layout_alignParentTop="@+id/DonorTextView"
+        android:layout_alignLeft="@+id/DonorTextView"
+        android:layout_alignStart="@+id/DonorTextView" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Date"
+        android:id="@+id/DateTextView"
+        android:layout_below="@+id/BarCodeIDView"
+        android:layout_alignParentTop="@+id/BarCodeIDView"
+        android:layout_alignLeft="@+id/BarCodeIDView"
+        android:layout_alignStart="@+id/BarCodeIDView"
+        />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_alignParentLeft="true"
+        android:layout_toStartOf="@+id/DateTextView"
+        android:layout_below="@+id/DonationsEditText"
+        android:layout_alignRight="@+id/BarCodeIDView"
+        android:layout_alignEnd="@+id/BarCodeIDView"
+        />
 </RelativeLayout>
