@@ -1,6 +1,10 @@
-from flask import Flask, url_for, render_template
+import sqlite3
+from flask import Flask, request, session, g, redirect, url_for, \
+             abort, render_template, flash
+
 app = Flask(__name__)
-app.debug = True
+app.config.from_envvar('DB.ini', silent=True)
+app.debug = app.config['DEBUG']
 
 @app.route("/index")
 @app.route("/")

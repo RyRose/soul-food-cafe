@@ -1,2 +1,4 @@
 # For Flask
 instance/
+
+*.swp
