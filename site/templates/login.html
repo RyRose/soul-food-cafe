@@ -5,13 +5,11 @@
 {% endblock %}
 
 {% block body %}
-    {% if invalid %}
-    blah
-    {% else %}
-    good to go
-    {% endif %}
+{% if invalid %}
+<!-- Sorry, your username/password was invalid. -->
+Use <strong>admin</strong> for username and <strong>admin</strong> for password.
+{% endif %}
 <form action="login" method="POST" name="login">
-    
     <h4>Username</h4>
     <input type="text" name="username">
     <h4>Password</h4>

@@ -1,110 +1,69 @@
 {% extends "main_layout.html" %}
+
+{% block head %}
+<link type="text/css" rel="stylesheet" href="//cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css" />
+<script src="//cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+
+<script>
+$(document).ready(function(){
+        $('#donation_table').DataTable();
+});
+</script>
+{% endblock %}
+
 {% block body %}<div id="node-page-2" >
 
-    <strong>Week:</strong>
-    <select>
-        <option value="1">3/9/16 - 3/16/16</option>
-        <option value="2">3/16/16 - 3/23/16</option>
-        <option value="3">3/23/16 - 3/30/16</option>
-        <option value="4">3/30/16 - 4/5/16</option>
-    </select>
+    <strong>Week: 4/17/16 - 4/23/16</strong>
+    <br /> <!-- <- Delete. crap style, use css -->
 
     <a id="export_table" href="#">Export data to Excel</a>
 
-    <table class="table table-striped" >
+    <!-- Center columns -->
+    <table id="donation_table" class="cell-border">
         <thead> 
             <tr>        
-                <th>Donor</th>
-                <th>Header 2</th>
-                <th>Header 3</th>
-                <th>Header 4</th>
-                <th>Header 5</th>
-                <th>Header 6</th>
-                <th>Header 7</th>
-                <th>Header 8</th>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Brand</th>
+                <th>Category</th>
+                <th>Quantity</th>
+                <th>Weight</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>a</td>
-                <td>1<br></td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-            </tr>
-            <tr>
-                <td>b</td>
-                <td>8</td>
-                <td>9</td>
-                <td>10</td>
-                <td>11</td>
-                <td>12</td>
-                <td>13</td>
-                <td>14</td>
-            </tr>
-            <tr>
-                <td>c</td>
-                <td>15</td>
-                <td>16</td>
-                <td>17</td>
-                <td>18</td>
-                <td>19</td>
-                <td>20</td>
-                <td>21</td>
-            </tr>
-            <tr>
-                <td>d</td>
-                <td>22</td>
-                <td>23</td>
-                <td>24</td>
-                <td>25</td>
-                <td>26</td>
-                <td>27</td>
-                <td>28</td>
-            </tr>
-            <tr>
-                <td>e</td>
-                <td>29</td>
-                <td>30</td>
-                <td>31</td>
-                <td>32</td>
-                <td>33</td>
-                <td>34</td>
-                <td>35</td>
-            </tr>
-            <tr>
-                <td>f</td>
-                <td>36</td>
-                <td>37</td>
-                <td>38</td>
-                <td>39</td>
-                <td>40</td>
-                <td>41</td>
-                <td>42</td>
-            </tr>
-            <tr>
-                <td>g</td>
-                <td>43</td>
-                <td>44</td>
-                <td>45</td>
-                <td>46</td>
-                <td>47</td>
-                <td>48</td>
-                <td>49</td>
-            </tr>
-            <tr>
-                <td>h</td>
-                <td>50</td>
-                <td>51</td>
-                <td>52</td>
-                <td>53</td>
-                <td>54</td>
-                <td>55</td>
-                <td>56</td>
-            </tr>
+              <tr>
+                      <td class="tg-031e">Soup</td>
+                          <td class="tg-031e">4/17/16</td>
+                              <td class="tg-031e">Campbell's</td>
+                                  <td class="tg-031e">Canned</td>
+                                      <td class="tg-031e">4</td>
+                                          <td class="tg-031e">2</td>
+                                            </tr>
+                                              <tr>
+                                                      <td class="tg-yw4l">Milk</td>
+                                                          <td class="tg-yw4l">4/18/16</td>
+                                                              <td class="tg-yw4l">Hiland</td>
+                                                                  <td class="tg-yw4l">Jug</td>
+                                                                      <td class="tg-yw4l">2</td>
+                                                                          <td class="tg-yw4l">8.6</td>
+                                                                            </tr>
+                                                                              <tr>
+                                                                                      <td class="tg-yw4l">Mac &amp; Cheese</td>
+                                                                                          <td class="tg-yw4l">4/19/16</td>
+                                                                                              <td class="tg-yw4l">Kraft</td>
+                                                                                                  <td class="tg-yw4l">Box</td>
+                                                                                                      <td class="tg-yw4l">5</td>
+                                                                                                          <td class="tg-yw4l">2</td>
+                                                                                                            </tr>
+                                                                                                              <tr>
+                                                                                                                      <td class="tg-yw4l">Rice Crispy Treats</td>
+                                                                                                                          <td class="tg-yw4l">4/20/16</td>
+                                                                                                                              <td class="tg-yw4l">Kellog</td>
+                                                                                                                                  <td class="tg-yw4l">Box</td>
+                                                                                                                                      <td class="tg-yw4l">3</td>
+                                                                                                                                          <td class="tg-yw4l">1</td>
+                                                                                                                                            </tr>
+
             <tbody>
     </table>
 </div>	
