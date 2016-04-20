@@ -1,6 +1,17 @@
 {% extends "main_layout.html" %}
+
+{% block head %}
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}" />
+{% endblock %}
+
 {% block body %}
-<form action="donations" method="get" name="login">
+    {% if invalid %}
+    blah
+    {% else %}
+    good to go
+    {% endif %}
+<form action="login" method="POST" name="login">
+    
     <h4>Username</h4>
     <input type="text" name="username">
     <h4>Password</h4>

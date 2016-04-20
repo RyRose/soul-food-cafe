@@ -27,7 +27,7 @@
             );
         });
         </script>
-
+        {% block head %}{% endblock %}
     </head>
 
     <body class="front node-type-page no-sidebars">
@@ -35,7 +35,7 @@
             <div id="site-header" class="container-16 clearfix">
                 <div id="branding" class="grid-4">
                     <div id="logo"> 
-                        <a href="index" class="active"><img src="{{ url_for('static', filename='css/sites/all/themes/soulfood/logo.png')  }}" alt="Soul Food Café Mission" title="Soul Food Café Mission" width="583" height="91" /></a>        
+                        <a href="/" class="active"><img src="{{ url_for('static', filename='css/sites/all/themes/soulfood/logo.png')  }}" alt="Soul Food Café Mission" title="Soul Food Café Mission" width="583" height="91" /></a>        
                     </div>
                 </div>
                 <div><ul class="nice-menu nice-menu-down" id="nice-menu-0"><li class="menu-311 menu-path-front active-trail first  odd "><a href="#" title="" class="active">home</a></li>
