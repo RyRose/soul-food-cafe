@@ -1,0 +1,4019 @@
+/* $Id: 960.css,v 1.1.2.4 2010/05/26 15:12:26 himerus Exp $ */
+
+/*
+  960 Grid System ~ Core CSS.
+  Learn more ~ http://960.gs/
+
+  Licensed under GPL and MIT.
+
+  Modified for Drupal.
+*/
+
+/* `Containers
+----------------------------------------------------------------------------------------------------*/
+
+.container-12,
+.container-16,
+.container-24 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+}
+
+/* `Grid >> Global
+----------------------------------------------------------------------------------------------------*/
+
+.grid-1,
+.grid-2,
+.grid-3,
+.grid-4,
+.grid-5,
+.grid-6,
+.grid-7,
+.grid-8,
+.grid-9,
+.grid-10,
+.grid-11,
+.grid-12,
+.grid-13,
+.grid-14,
+.grid-15,
+.grid-16 {
+  display: inline;
+  float: left;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Adding 24 Column layout */
+.container-24 .grid-1,
+.container-24 .grid-2,
+.container-24 .grid-3,
+.container-24 .grid-4,
+.container-24 .grid-5,
+.container-24 .grid-6,
+.container-24 .grid-7,
+.container-24 .grid-8,
+.container-24 .grid-9,
+.container-24 .grid-10,
+.container-24 .grid-11,
+.container-24 .grid-12,
+.container-24 .grid-13,
+.container-24 .grid-14,
+.container-24 .grid-15,
+.container-24 .grid-16,
+.container-24 .grid-17,
+.container-24 .grid-18,
+.container-24 .grid-19,
+.container-24 .grid-20,
+.container-24 .grid-21,
+.container-24 .grid-22,
+.container-24 .grid-23,
+.container-24 .grid-24 {
+  display: inline;
+  float: left;
+  position: relative;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+/* Grid >> 24 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container-24 .grid-1 {
+  width: 30px;
+}
+
+.container-24 .grid-2 {
+  width: 70px;
+}
+
+.container-24 .grid-3 {
+  width: 110px;
+}
+
+.container-24 .grid-4 {
+  width: 150px;
+}
+
+.container-24 .grid-5 {
+  width: 190px;
+}
+
+.container-24 .grid-6 {
+  width: 230px;
+}
+
+.container-24 .grid-7 {
+  width: 270px;
+}
+
+.container-24 .grid-8 {
+  width: 310px;
+}
+
+.container-24 .grid-9 {
+  width: 350px;
+}
+
+.container-24 .grid-10 {
+  width: 390px;
+}
+
+.container-24 .grid-11 {
+  width: 430px;
+}
+
+.container-24 .grid-12 {
+  width: 470px;
+}
+
+.container-24 .grid-13 {
+  width: 510px;
+}
+
+.container-24 .grid-14 {
+  width: 550px;
+}
+
+.container-24 .grid-15 {
+  width: 590px;
+}
+
+.container-24 .grid-16 {
+  width: 630px;
+}
+
+.container-24 .grid-17 {
+  width: 670px;
+}
+
+.container-24 .grid-18 {
+  width: 710px;
+}
+
+.container-24 .grid-19 {
+  width: 750px;
+}
+
+.container-24 .grid-20 {
+  width: 790px;
+}
+
+.container-24 .grid-21 {
+  width: 830px;
+}
+
+.container-24 .grid-22 {
+  width: 870px;
+}
+
+.container-24 .grid-23 {
+  width: 910px;
+}
+
+.container-24 .grid-24 {
+  width: 950px;
+}
+
+/* Prefix Extra Space >> 24 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container-24 .prefix-1 {
+  padding-left: 40px;
+}
+
+.container-24 .prefix-2 {
+  padding-left: 80px;
+}
+
+.container-24 .prefix-3 {
+  padding-left: 120px;
+}
+
+.container-24 .prefix-4 {
+  padding-left: 160px;
+}
+
+.container-24 .prefix-5 {
+  padding-left: 200px;
+}
+
+.container-24 .prefix-6 {
+  padding-left: 240px;
+}
+
+.container-24 .prefix-7 {
+  padding-left: 280px;
+}
+
+.container-24 .prefix-8 {
+  padding-left: 320px;
+}
+
+.container-24 .prefix-9 {
+  padding-left: 360px;
+}
+
+.container-24 .prefix-10 {
+  padding-left: 400px;
+}
+
+.container-24 .prefix-11 {
+  padding-left: 440px;
+}
+
+.container-24 .prefix-12 {
+  padding-left: 480px;
+}
+
+.container-24 .prefix-13 {
+  padding-left: 520px;
+}
+
+.container-24 .prefix-14 {
+  padding-left: 560px;
+}
+
+.container-24 .prefix-15 {
+  padding-left: 600px;
+}
+
+.container-24 .prefix-16 {
+  padding-left: 640px;
+}
+
+.container-24 .prefix-17 {
+  padding-left: 680px;
+}
+
+.container-24 .prefix-18 {
+  padding-left: 720px;
+}
+
+.container-24 .prefix-19 {
+  padding-left: 760px;
+}
+
+.container-24 .prefix-20 {
+  padding-left: 800px;
+}
+
+.container-24 .prefix-21 {
+  padding-left: 840px;
+}
+
+.container-24 .prefix-22 {
+  padding-left: 880px;
+}
+
+.container-24 .prefix-23 {
+  padding-left: 920px;
+}
+
+/* Suffix Extra Space >> 24 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container-24 .suffix-1 {
+  padding-right: 40px;
+}
+
+.container-24 .suffix-2 {
+  padding-right: 80px;
+}
+
+.container-24 .suffix-3 {
+  padding-right: 120px;
+}
+
+.container-24 .suffix-4 {
+  padding-right: 160px;
+}
+
+.container-24 .suffix-5 {
+  padding-right: 200px;
+}
+
+.container-24 .suffix-6 {
+  padding-right: 240px;
+}
+
+.container-24 .suffix-7 {
+  padding-right: 280px;
+}
+
+.container-24 .suffix-8 {
+  padding-right: 320px;
+}
+
+.container-24 .suffix-9 {
+  padding-right: 360px;
+}
+
+.container-24 .suffix-10 {
+  padding-right: 400px;
+}
+
+.container-24 .suffix-11 {
+  padding-right: 440px;
+}
+
+.container-24 .suffix-12 {
+  padding-right: 480px;
+}
+
+.container-24 .suffix-13 {
+  padding-right: 520px;
+}
+
+.container-24 .suffix-14 {
+  padding-right: 560px;
+}
+
+.container-24 .suffix-15 {
+  padding-right: 600px;
+}
+
+.container-24 .suffix-16 {
+  padding-right: 640px;
+}
+
+.container-24 .suffix-17 {
+  padding-right: 680px;
+}
+
+.container-24 .suffix-18 {
+  padding-right: 720px;
+}
+
+.container-24 .suffix-19 {
+  padding-right: 760px;
+}
+
+.container-24 .suffix-20 {
+  padding-right: 800px;
+}
+
+.container-24 .suffix-21 {
+  padding-right: 840px;
+}
+
+.container-24 .suffix-22 {
+  padding-right: 880px;
+}
+
+.container-24 .suffix-23 {
+  padding-right: 920px;
+}
+
+/* Push Space >> 24 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container-24 .push-1 {
+  left: 40px;
+}
+
+.container-24 .push-2 {
+  left: 80px;
+}
+
+.container-24 .push-3 {
+  left: 120px;
+}
+
+.container-24 .push-4 {
+  left: 160px;
+}
+
+.container-24 .push-5 {
+  left: 200px;
+}
+
+.container-24 .push-6 {
+  left: 240px;
+}
+
+.container-24 .push-7 {
+  left: 280px;
+}
+
+.container-24 .push-8 {
+  left: 320px;
+}
+
+.container-24 .push-9 {
+  left: 360px;
+}
+
+.container-24 .push-10 {
+  left: 400px;
+}
+
+.container-24 .push-11 {
+  left: 440px;
+}
+
+.container-24 .push-12 {
+  left: 480px;
+}
+
+.container-24 .push-13 {
+  left: 520px;
+}
+
+.container-24 .push-14 {
+  left: 560px;
+}
+
+.container-24 .push-15 {
+  left: 600px;
+}
+
+.container-24 .push-16 {
+  left: 640px;
+}
+
+.container-24 .push-17 {
+  left: 680px;
+}
+
+.container-24 .push-18 {
+  left: 720px;
+}
+
+.container-24 .push-19 {
+  left: 760px;
+}
+
+.container-24 .push-20 {
+  left: 800px;
+}
+
+.container-24 .push-21 {
+  left: 840px;
+}
+
+.container-24 .push-22 {
+  left: 880px;
+}
+
+.container-24 .push-23 {
+  left: 920px;
+}
+
+/* Pull Space >> 24 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container-24 .pull-1 {
+  left: -40px;
+}
+
+.container-24 .pull-2 {
+  left: -80px;
+}
+
+.container-24 .pull-3 {
+  left: -120px;
+}
+
+.container-24 .pull-4 {
+  left: -160px;
+}
+
+.container-24 .pull-5 {
+  left: -200px;
+}
+
+.container-24 .pull-6 {
+  left: -240px;
+}
+
+.container-24 .pull-7 {
+  left: -280px;
+}
+
+.container-24 .pull-8 {
+  left: -320px;
+}
+
+.container-24 .pull-9 {
+  left: -360px;
+}
+
+.container-24 .pull-10 {
+  left: -400px;
+}
+
+.container-24 .pull-11 {
+  left: -440px;
+}
+
+.container-24 .pull-12 {
+  left: -480px;
+}
+
+.container-24 .pull-13 {
+  left: -520px;
+}
+
+.container-24 .pull-14 {
+  left: -560px;
+}
+
+.container-24 .pull-15 {
+  left: -600px;
+}
+
+.container-24 .pull-16 {
+  left: -640px;
+}
+
+.container-24 .pull-17 {
+  left: -680px;
+}
+
+.container-24 .pull-18 {
+  left: -720px;
+}
+
+.container-24 .pull-19 {
+  left: -760px;
+}
+
+.container-24 .pull-20 {
+  left: -800px;
+}
+
+.container-24 .pull-21 {
+  left: -840px;
+}
+
+.container-24 .pull-22 {
+  left: -880px;
+}
+
+.container-24 .pull-23 {
+  left: -920px;
+}
+
+/* end data for 24 column layout */
+
+.container-12 .grid-3,
+.container-16 .grid-4 {
+  width: 220px;
+}
+
+.container-12 .grid-6,
+.container-16 .grid-8 {
+  width: 460px;
+}
+
+.container-12 .grid-9,
+.container-16 .grid-12 {
+  width: 700px;
+}
+
+.container-12 .grid-12,
+.container-16 .grid-16 {
+  width: 940px;
+}
+
+/* `Grid >> Children (Alpha ~ First, Omega ~ Last)
+----------------------------------------------------------------------------------------------------*/
+
+.alpha {
+  margin-left: 0 !important;
+}
+
+.omega {
+  margin-right: 0 !important;
+}
+
+/* `Grid >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container-12 .grid-1 {
+  width: 60px;
+}
+
+.container-12 .grid-2 {
+  width: 140px;
+}
+
+.container-12 .grid-4 {
+  width: 300px;
+}
+
+.container-12 .grid-5 {
+  width: 380px;
+}
+
+.container-12 .grid-7 {
+  width: 540px;
+}
+
+.container-12 .grid-8 {
+  width: 620px;
+}
+
+.container-12 .grid-10 {
+  width: 780px;
+}
+
+.container-12 .grid-11 {
+  width: 860px;
+}
+
+/* `Grid >> 16 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container-16 .grid-1 {
+  width: 40px;
+}
+
+.container-16 .grid-2 {
+  width: 100px;
+}
+
+.container-16 .grid-3 {
+  width: 160px;
+}
+
+.container-16 .grid-5 {
+  width: 280px;
+}
+
+.container-16 .grid-6 {
+  width: 340px;
+}
+
+.container-16 .grid-7 {
+  width: 400px;
+}
+
+.container-16 .grid-9 {
+  width: 520px;
+}
+
+.container-16 .grid-10 {
+  width: 580px;
+}
+
+.container-16 .grid-11 {
+  width: 640px;
+}
+
+.container-16 .grid-13 {
+  width: 760px;
+}
+
+.container-16 .grid-14 {
+  width: 820px;
+}
+
+.container-16 .grid-15 {
+  width: 880px;
+}
+
+/* `Prefix Extra Space >> Global
+----------------------------------------------------------------------------------------------------*/
+
+.container-12 .prefix-3,
+.container-16 .prefix-4 {
+  padding-left: 240px;
+}
+
+.container-12 .prefix-6,
+.container-16 .prefix-8 {
+  padding-left: 480px;
+}
+
+.container-12 .prefix-9,
+.container-16 .prefix-12 {
+  padding-left: 720px;
+}
+
+/* `Prefix Extra Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container-12 .prefix-1 {
+  padding-left: 80px;
+}
+
+.container-12 .prefix-2 {
+  padding-left: 160px;
+}
+
+.container-12 .prefix-4 {
+  padding-left: 320px;
+}
+
+.container-12 .prefix-5 {
+  padding-left: 400px;
+}
+
+.container-12 .prefix-7 {
+  padding-left: 560px;
+}
+
+.container-12 .prefix-8 {
+  padding-left: 640px;
+}
+
+.container-12 .prefix-10 {
+  padding-left: 800px;
+}
+
+.container-12 .prefix-11 {
+  padding-left: 880px;
+}
+
+/* `Prefix Extra Space >> 16 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container-16 .prefix-1 {
+  padding-left: 60px;
+}
+
+.container-16 .prefix-2 {
+  padding-left: 120px;
+}
+
+.container-16 .prefix-3 {
+  padding-left: 180px;
+}
+
+.container-16 .prefix-5 {
+  padding-left: 300px;
+}
+
+.container-16 .prefix-6 {
+  padding-left: 360px;
+}
+
+.container-16 .prefix-7 {
+  padding-left: 420px;
+}
+
+.container-16 .prefix-9 {
+  padding-left: 540px;
+}
+
+.container-16 .prefix-10 {
+  padding-left: 600px;
+}
+
+.container-16 .prefix-11 {
+  padding-left: 660px;
+}
+
+.container-16 .prefix-13 {
+  padding-left: 780px;
+}
+
+.container-16 .prefix-14 {
+  padding-left: 840px;
+}
+
+.container-16 .prefix-15 {
+  padding-left: 900px;
+}
+
+/* `Suffix Extra Space >> Global
+----------------------------------------------------------------------------------------------------*/
+
+.container-12 .suffix-3,
+.container-16 .suffix-4 {
+  padding-right: 240px;
+}
+
+.container-12 .suffix-6,
+.container-16 .suffix-8 {
+  padding-right: 480px;
+}
+
+.container-12 .suffix-9,
+.container-16 .suffix-12 {
+  padding-right: 720px;
+}
+
+/* `Suffix Extra Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container-12 .suffix-1 {
+  padding-right: 80px;
+}
+
+.container-12 .suffix-2 {
+  padding-right: 160px;
+}
+
+.container-12 .suffix-4 {
+  padding-right: 320px;
+}
+
+.container-12 .suffix-5 {
+  padding-right: 400px;
+}
+
+.container-12 .suffix-7 {
+  padding-right: 560px;
+}
+
+.container-12 .suffix-8 {
+  padding-right: 640px;
+}
+
+.container-12 .suffix-10 {
+  padding-right: 800px;
+}
+
+.container-12 .suffix-11 {
+  padding-right: 880px;
+}
+
+/* `Suffix Extra Space >> 16 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container-16 .suffix-1 {
+  padding-right: 60px;
+}
+
+.container-16 .suffix-2 {
+  padding-right: 120px;
+}
+
+.container-16 .suffix-3 {
+  padding-right: 180px;
+}
+
+.container-16 .suffix-5 {
+  padding-right: 300px;
+}
+
+.container-16 .suffix-6 {
+  padding-right: 360px;
+}
+
+.container-16 .suffix-7 {
+  padding-right: 420px;
+}
+
+.container-16 .suffix-9 {
+  padding-right: 540px;
+}
+
+.container-16 .suffix-10 {
+  padding-right: 600px;
+}
+
+.container-16 .suffix-11 {
+  padding-right: 660px;
+}
+
+.container-16 .suffix-13 {
+  padding-right: 780px;
+}
+
+.container-16 .suffix-14 {
+  padding-right: 840px;
+}
+
+.container-16 .suffix-15 {
+  padding-right: 900px;
+}
+
+/* `Push Space >> Global
+----------------------------------------------------------------------------------------------------*/
+
+.container-12 .push-3,
+.container-16 .push-4 {
+  left: 240px;
+}
+
+.container-12 .push-6,
+.container-16 .push-8 {
+  left: 480px;
+}
+
+.container-12 .push-9,
+.container-16 .push-12 {
+  left: 720px;
+}
+
+/* `Push Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container-12 .push-1 {
+  left: 80px;
+}
+
+.container-12 .push-2 {
+  left: 160px;
+}
+
+.container-12 .push-4 {
+  left: 320px;
+}
+
+.container-12 .push-5 {
+  left: 400px;
+}
+
+.container-12 .push-7 {
+  left: 560px;
+}
+
+.container-12 .push-8 {
+  left: 640px;
+}
+
+.container-12 .push-10 {
+  left: 800px;
+}
+
+.container-12 .push-11 {
+  left: 880px;
+}
+
+/* `Push Space >> 16 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container-16 .push-1 {
+  left: 60px;
+}
+
+.container-16 .push-2 {
+  left: 120px;
+}
+
+.container-16 .push-3 {
+  left: 180px;
+}
+
+.container-16 .push-5 {
+  left: 300px;
+}
+
+.container-16 .push-6 {
+  left: 360px;
+}
+
+.container-16 .push-7 {
+  left: 420px;
+}
+
+.container-16 .push-9 {
+  left: 540px;
+}
+
+.container-16 .push-10 {
+  left: 600px;
+}
+
+.container-16 .push-11 {
+  left: 660px;
+}
+
+.container-16 .push-13 {
+  left: 780px;
+}
+
+.container-16 .push-14 {
+  left: 840px;
+}
+
+.container-16 .push-15 {
+  left: 900px;
+}
+
+/* `Pull Space >> Global
+----------------------------------------------------------------------------------------------------*/
+
+.container-12 .pull-3,
+.container-16 .pull-4 {
+  left: -240px;
+}
+
+.container-12 .pull-6,
+.container-16 .pull-8 {
+  left: -480px;
+}
+
+.container-12 .pull-9,
+.container-16 .pull-12 {
+  left: -720px;
+}
+
+/* `Pull Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container-12 .pull-1 {
+  left: -80px;
+}
+
+.container-12 .pull-2 {
+  left: -160px;
+}
+
+.container-12 .pull-4 {
+  left: -320px;
+}
+
+.container-12 .pull-5 {
+  left: -400px;
+}
+
+.container-12 .pull-7 {
+  left: -560px;
+}
+
+.container-12 .pull-8 {
+  left: -640px;
+}
+
+.container-12 .pull-10 {
+  left: -800px;
+}
+
+.container-12 .pull-11 {
+  left: -880px;
+}
+
+/* `Pull Space >> 16 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container-16 .pull-1 {
+  left: -60px;
+}
+
+.container-16 .pull-2 {
+  left: -120px;
+}
+
+.container-16 .pull-3 {
+  left: -180px;
+}
+
+.container-16 .pull-5 {
+  left: -300px;
+}
+
+.container-16 .pull-6 {
+  left: -360px;
+}
+
+.container-16 .pull-7 {
+  left: -420px;
+}
+
+.container-16 .pull-9 {
+  left: -540px;
+}
+
+.container-16 .pull-10 {
+  left: -600px;
+}
+
+.container-16 .pull-11 {
+  left: -660px;
+}
+
+.container-16 .pull-13 {
+  left: -780px;
+}
+
+.container-16 .pull-14 {
+  left: -840px;
+}
+
+.container-16 .pull-15 {
+  left: -900px;
+}
+/* Indent & Justify classes */
+
+.rteindent1 {
+  margin-left: 40px;
+}
+.rteindent2 {
+  margin-left: 80px;
+}
+.rteindent3 {
+  margin-left: 120px;
+}
+.rteindent4 {
+  margin-left: 160px;
+}
+.rteleft {
+  text-align: left;
+}
+.rteright {
+  text-align: right;
+}
+.rtecenter {
+  text-align: center;
+}
+.rtejustify {
+  text-align: justify;
+}
+.ibimage_left {
+  float: left;
+}
+.ibimage_right {
+  float: right;
+}
+
+/* CKEditor padding in IE */
+table.cke_editor fieldset {
+  padding:0 !important;
+}
+/* hack with ie and garland editing area size fix - [#733512] */
+.cke_editor{
+  display: table !important;
+}
+.cke_editor,#ie#bug {
+  display: inline-table !important;
+}
+
+.cke_panel_listItem {
+    background-image: none;
+    padding-left: 0;
+}
+/* remove top border from tbody - overwrite system.css - [#751672] */
+tbody {
+    border: 0;
+}
+
+/*toolbar wizzard*/
+form#ckeditor-admin-profile-form textarea#edit-toolbar, form#ckeditor-admin-global-profile-form textarea#edit-toolbar {
+    display: none;
+}
+form#ckeditor-admin-profile-form #edit-toolbar + .grippie, form#ckeditor-admin-global-profile-form #edit-toolbar + .grippie {
+    display: none;
+}
+div.sortableList {
+    cursor: n-resize;
+}
+div.widthMarker {
+    height: 20px;
+    border-top: 1px dashed #CCC;
+    margin: 10px 0px 0px 1px;
+    padding-left: 1px;
+    text-align: center;
+}
+div.sortableList.group {
+    margin: 20px 0px 0px 0px;
+}
+div.sortableList div.sortableListDiv {
+    height: 30px;
+    margin-bottom: 3px;
+    width: 900px;
+}
+div.sortableList div.sortableListDiv span.sortableListSpan {
+    background-color: #F0F0EE;
+    height: 30px;
+    border-right: 1px dashed #CCC;
+    display: block;
+}
+div.sortableList div.sortableListDiv span.sortableListSpan ul {
+    background: none;
+    width: 900px;
+    white-space: nowrap;
+    border: 1px solid #CCC;
+    list-style: none;
+    margin:0px;
+    padding: 0px 0px 0px 1px;
+    height: 30px;
+}
+div.sortableList div.sortableListDiv span.sortableListSpan ul li {
+    background: none;
+    list-style: none;
+    cursor: move;
+    height: 18px;
+    min-width: 18px;
+    padding: 2px;
+}
+div.sortableList div.sortableListDiv span.sortableListSpan ul li.group {
+    min-width: 5px;
+    padding-left: 2px;
+}
+div.sortableList div.sortableListDiv span.sortableListSpan ul li img {
+    border: 0;
+    padding: 0;
+    margin: 0
+}
+li.sortableItem {
+    position: relative;
+    float: left;
+    margin: 3px 1px 1px 0px;
+    border: 1px solid #CCC;
+    background-color: #F0F0EE;
+    z-index: 99;
+}
+
+/* Fix for fieldset for-edit-apperance in Firefox*/
+fieldset#edit-appearance div#groupLayout, div#allButtons  {
+  border: 0;
+  padding: 0 0 0 0;
+  margin: 1em 0;
+  overflow: auto;
+}
+
+/**
+ * Fix for double scrollbar on ckeditor menu dropdowns in IE - [#1361894]
+ */
+.cke_browser_ie .cke_panel_block {
+    overflow: hidden !important;
+}
+/* $Id$ */
+
+/* Node display */
+.field .field-label,
+.field .field-label-inline,
+.field .field-label-inline-first {
+  font-weight:bold;
+}
+.field .field-label-inline,
+.field .field-label-inline-first {
+  display:inline;
+}
+.field .field-label-inline {
+  visibility:hidden;
+}
+
+/* Node form display */
+.node-form .content-multiple-table td.content-multiple-drag {
+  width:30px;
+  padding-right:0;/*LTR*/
+}
+.node-form .content-multiple-table td.content-multiple-drag a.tabledrag-handle{
+  padding-right:.5em;/*LTR*/
+}
+
+.node-form .content-add-more .form-submit{
+  margin:0;
+}
+
+.node-form .number {
+  display:inline;
+  width:auto;
+}
+.node-form .text {
+  width:auto;
+}
+
+/* CSS overrides for Views-based autocomplete results.
+  - #autocomplete uses "white-space:pre", which is no good with
+    Views' template-based rendering
+  - Field titles are rendered with <label> in default templates,
+    but we don't want the 'form' styling it gets under .form-item
+*/
+.form-item #autocomplete .reference-autocomplete {
+  white-space:normal;
+}
+
+.form-item #autocomplete .reference-autocomplete label {
+  display:inline;
+  font-weight:normal;
+}
+
+/* 'Manage fields' overview */
+#content-field-overview-form .advanced-help-link,
+#content-display-overview-form .advanced-help-link {
+  margin: 4px 4px 0 0;/*LTR*/
+}
+#content-field-overview-form .label-group,
+#content-display-overview-form .label-group,
+#content-copy-export-form .label-group {
+  font-weight: bold;
+}
+table#content-field-overview .label-add-new-field,
+table#content-field-overview .label-add-existing-field,
+table#content-field-overview .label-add-new-group {
+  float: left;/*LTR*/
+}
+table#content-field-overview tr.content-add-new .tabledrag-changed {
+  display: none;
+}
+table#content-field-overview tr.content-add-new .description {
+  margin-bottom: 0;
+}
+table#content-field-overview .content-new {
+  font-weight: bold;
+  padding-bottom: .5em;
+}
+
+/* 'Advanced help' pages */
+.advanced-help-topic h3,
+.advanced-help-topic h4,
+.advanced-help-topic h5,
+.advanced-help-topic h6  {
+  margin:1em 0 .5em 0;
+}
+.advanced-help-topic dd {
+  margin-bottom: .5em;
+}
+.advanced-help-topic span.code {
+  background-color:#EDF1F3;
+  font-family:"Bitstream Vera Sans Mono",Monaco,"Lucida Console",monospace;
+  font-size:0.9em;
+  padding:1px;
+}
+.advanced-help-topic .content-border {
+  border:1px solid #AAA
+}/* $Id: custom.css,v 1.1.2.3 2010/04/02 15:39:15 himerus Exp $ */
+/**
+ * Omega, for Drupal 6.x
+ * Jake Strawn - http://himerus.com
+ * Project Page - http://drupal.org/project/omega
+ * 
+ * The custom.css provides overrides for module based CSS for various items.
+ * This is the last CSS to be included in the Omega base theme, unless using additional
+ * CSS in the sub theme level. 
+ *
+ * I prefer to keep this file light and ONLY module related, but in your sub theme, it could
+ * be a decent place for those final overrides you may need to do on any elements
+ *
+ * Omega CSS Table of Contents for custom.css
+ *
+ * 1.) Geshi Code Filter CSS
+ * 2.) Vertical Tabs CSS
+ * 3.) Block Layouts
+ * 4.) 
+ * 5.) 
+ * 6.) 
+ * 7.) 
+ */
+ 
+/** ################# Geshi Code Filter CSS ####################### */
+/**
+ * The main purpose for the Geshi Filter styles are for my personal use, and use in the demo version
+ * of the Omega theme to style up code snippets a bit more pretty.
+ */
+ 
+.geshifilter {
+	font-size: 9px;
+	margin: 0;
+  padding: 10px;
+  line-height: 1.2em;
+  border: 1px solid #CCC;
+  background: #EEE;
+}
+
+.block code, .block .geshifilter {
+  margin: 0;  
+}
+
+/** ################# Vertical Tabs CSS ####################### */
+/**
+ * I found during development that the default vertical tabs positioning was breaking, so some overrides
+ * were in order in case the Omega theme, or a sub-theme is used for administrative tasks & content editing
+ * rather than using something like the admin module/slate theme.
+ */
+.vertical-tabs {
+	border:1px solid #CCCCCC;
+	margin:1em 0;
+	background: #FFF;
+}
+
+.vertical-tabs-list {
+	border-top:0;
+	float:left;
+	left:0;
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:0 !important;
+	padding:0;
+	position:relative;
+	width:18em;
+}
+
+.vertical-tabs-panes {
+  padding: 0 !important;	
+}
+
+fieldset.vertical-tabs-pane {
+	background: #FFF;
+  padding: 0;
+  font-size: 0.9em;
+}
+
+.vertical-tabs-list li {
+	background:#EEEEEE none repeat scroll 0 0;
+	border-color:-moz-use-text-color #CCCCCC #CCCCCC;
+	border-style:none solid solid none;
+	border-width:0 1px 1px;
+	height:1%;
+	margin:0;
+	padding:0;
+}
+
+.vertical-tabs-list li.last { 
+  border-style: none solid none none;
+}
+
+.vertical-tabs-list li:hover { 
+  background: #D9FFF2;
+}
+/*
+** HTML elements
+*/
+fieldset {
+  margin-bottom: 1em;
+  padding: .5em;
+}
+form {
+  margin: 0;
+  padding: 0;
+}
+hr {
+  height: 1px;
+  border: 1px solid gray;
+}
+img {
+  border: 0;
+}
+table {
+  border-collapse: collapse;
+}
+th {
+  text-align: left; /* LTR */
+  padding-right: 1em; /* LTR */
+  border-bottom: 3px solid #ccc;
+}
+
+/*
+** Markup free clearing
+** Details: http://www.positioniseverything.net/easyclearing.html
+*/
+.clear-block:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clear-block {
+  display: inline-block;
+}
+
+/* Hides from IE-mac \*/
+* html .clear-block {
+  height: 1%;
+}
+.clear-block {
+  display: block;
+}
+/* End hide from IE-mac */
+/* $Id: defaults.css,v 1.7.2.7 2010/06/11 15:11:25 himerus Exp $ */
+/**
+ * Omega, for Drupal 6.x
+ * Jake Strawn - http://himerus.com
+ * Project Page - http://drupal.org/project/omega
+ *
+ * The defaults.css file is the default set of default styles
+ * normally available with the Omega base theme.
+ * All of these styles are easily overwritten, but here to give
+ * a bit more "sexy" right out of the box.
+ *
+ *
+ * Omega CSS Table of Contents for defaults.css
+ *
+ * 1.) Generic Page Elements - pretty generic indeed.
+ * 2.) Content Tabs - styling for tabs. (view, edit, etc)
+ * 3.) Pager Navigation - Styling for pager navigation
+ * 4.) clear-block code - default drupal clear-block definitions
+ * 5.) Cleanup CSS - Primarily sizing & margins for default elements
+ * 6.)
+ * 7.)
+ */
+
+/** ################# 1.) Generic Page Elements ####################### */
+body {
+  background: #FFF;
+}
+
+.description {
+  color: #594F36;
+  font-size: 0.9em;
+  line-height: 1em;
+  padding: 10px;
+}
+
+.admin-panel {
+  padding: 0;
+}
+
+.admin .body {
+  padding: 0;
+}
+
+#footer-message {
+  font-size: 0.8em;
+  color: #594F36;
+  margin: 5px 0 0 0;
+}
+
+#footer-message p {
+  margin: 0;
+}
+
+fieldset {
+  border: 1px solid #EAD885;
+  margin: 15px 0;
+  padding: 10px;
+}
+
+fieldset.collapsed {
+
+}
+
+fieldset legend {
+  font-weight: bold;
+}
+
+fieldset.collapsible legend a {
+  font-weight: bold;
+}
+
+fieldset .form-text {
+  width: 100%;
+}
+
+.status {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.messages {
+  margin-top: 20px;
+  margin-bottom: 0;
+  background-color: #fff;
+  border: 1px solid #b8d3e5;
+}
+
+.messages,
+.status,
+.warning,
+.error {
+  padding: 10px;
+}
+
+.messages ul {
+  margin-left: 20px;
+}
+
+.new {
+  font-size: 1.5em;
+  color: #FF0000;
+  display: block;
+  text-align: right;
+}
+
+.indented {
+  margin-left: 30px;
+}
+
+.comment-preview {
+  padding: 20px;
+}
+
+.help {
+  font-size: 0.9em;
+  padding: 10px;
+  padding-bottom: 0;
+  background-color: #fff;
+  border: 1px solid #b8d3e5;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.help p {
+  margin-bottom: 10px;
+}
+
+.preview {
+  background-color: #fcfce8;
+  border: 1px solid #e5e58f;
+}
+
+div.status {
+  color: #33a333;
+  border-color: #c7f2c8;
+}
+
+div.error, tr.error {
+  color: #a30000;
+  background-color: #FFCCCC;
+}
+
+.form-item input.error,
+.form-item textarea.error {
+  border: 1px solid #c52020;
+  color: #363636;
+}
+
+#branding img {
+  vertical-align: top;
+}
+
+#site-name {
+  font-size: 42px;
+  font-weight: normal;
+  font-family: Georgia, serif;
+  padding: 0;
+  margin: 0;
+  display: inline;
+  letter-spacing: -0.09em;
+  line-height: 85px;
+}
+
+#site-name a,
+#site-name a:hover,
+#site-name a:visited {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  text-decoration: none;
+}
+
+#site-menu {
+  text-align: right;
+}
+
+#search-box {
+  text-align: right;
+  float: right;
+}
+
+#search-box label, #search-box .form-submit {
+  display: none;
+}
+
+#search-box .form-text {
+  font-size: 16px;
+  padding: 1px 3px;
+}
+
+.breadcrumb {
+  font-size: 1.2em;
+  padding: 0;
+}
+
+#slogan {
+  font-size: 18px;
+  font-family: Georgia;
+}
+
+#main {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.block p {
+  margin: 0;
+}
+#mission {
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+#mission p {
+	margin: 0;
+  padding: 0;
+  font-style: italic;
+  font-size: 12px;
+}
+
+.sidebar .block {
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  margin: 0 0 0 1em;
+  padding: 0;
+}
+
+.sidebar ul li {
+  list-style-position: outside;
+  margin: 0;
+}
+
+.node {
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #38322B;
+}
+
+.block .content {
+  padding: 0;
+}
+
+/** ################# 2.) Content Tabs ####################### */
+
+#content-tabs {
+  padding: 10px;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  display: block;;
+  margin: 0 0 20px 0;
+  font-family: Georgia, serif;
+}
+
+#content-tabs ul.primary,
+#content-tabs ul.secondary {
+  margin: 0;
+  padding: 0 10px 0 0;
+  border: none;
+}
+
+#content-tabs ul.secondary {
+  margin-top: 5px;
+  text-transform: lowercase;
+}
+
+#content-tabs ul.primary li,
+#content-tabs ul.secondary li {
+  background: transparent;
+  border-style: none;
+  display: inline;
+  list-style: none;
+  margin: 0 10px 0 0;
+  padding: 0;
+}
+
+#content-tabs ul.primary li a:link,
+#content-tabs ul.primary li a:visited,
+#content-tabs ul.secondary li a:link,
+#content-tabs ul.secondary li a:visited {
+  background-color: transparent;
+  border: none;
+  color: #000;
+  font-size: 0.9em;
+  line-height: 1.2em;
+  font-weight: normal;
+  margin: 0;
+  padding: 0 0 6px 0;
+  text-decoration: none;
+}
+
+#content-tabs ul.secondary li a:link,
+#content-tabs ul.secondary li a:visited {
+  color: #000;
+  font-size: 0.9em;
+  line-height: 1.1em;
+}
+
+#content-tabs ul.primary li a.active:link,
+#content-tabs ul.primary li a.active:visited {
+  font-size: 1em;
+  border-bottom: 2px solid #000;
+  color: #000;
+  font-weight: bold;
+  padding-bottom: 2px;
+}
+
+#content-tabs ul.secondary li a.active:link,
+#content-tabs ul.secondary li a.active:visited {
+  border-bottom: 2px solid #000;
+  color: #000;
+  font-weight: bold;
+  padding-bottom: 2px;
+}
+
+#content-tabs ul.primary li a:hover,
+#content-tabs ul.secondary li a:hover {
+  border-bottom: 2px solid #999;
+  color: #888;
+  padding-bottom: 2px;
+}
+
+/** ################# 4.) clear-block code ####################### */
+.clear-block:after,
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clear-block,
+.clearfix {
+  display: inline-block;
+}
+
+/* Hides from IE-mac \*/
+* html .clear-block,
+* html .clearfix {
+  height: 1%;
+}
+
+.clear-block,
+.clearfix {
+  display: block;
+}
+/* End hide from IE-mac */
+
+
+/** ################# 5.) Cleanup CSS ####################### */
+
+/* Fix the HORRIBLE styling of the default comment block */
+.block-comment .item-list,
+.block-comment .item-list ul,
+.block-comment .item-list li {
+  margin: 0;
+  padding: 0;
+}
+
+.block-comment .item-list li {
+	color: #999;
+  font-size: 11px;
+	list-style-type: none;
+	margin: 0 0 5px 0;
+}
+
+.block-comment li a {
+  font-size: 13px;
+}
+
+table {
+  width: 100%;
+}
+
+#main-content ul,
+#main-content ol {
+  margin-left: 1em;
+}
+
+/* Clean up Default Book Navigation */
+.book-navigation {
+  margin: 10px 0;
+  padding: 0;
+}
+
+.book-navigation ul.menu {
+	font-size: 1.5em;
+	border: 0;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+.book-navigation .page-links {
+	clear: both;
+  font-size: 0.9em;
+}
+
+/* Changing the main node links */
+#main-content ul.links {
+	font-size: 0.9em;
+  margin-left: 0;
+}
+
+#main-content ul.links li,
+#main-content ul.links li a {
+  padding-left: 0;
+}
+
+/* fixing clearfix issues with padding at bottom of page */
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: "";
+	clear: both;
+	height: 0;
+}
+/**
+ * Formatter styles
+ */
+
+.filefield-icon {
+  margin: 0 2px 0 0; /* RTL */
+}
+
+/* End formatter styles. */
+
+/**
+ * General widget form styles (applicable to all widgets).
+ */
+.filefield-element {
+  margin: 1em 0;
+  white-space: normal;
+}
+
+.filefield-element .widget-preview {
+  float: left; /* RTL */
+  padding: 0 10px 0 0; /* RTL */
+  margin: 0 10px 0 0; /* RTL */
+  border-width: 0 1px 0 0; /* RTL */
+  border-style: solid;
+  border-color: #CCC;
+  max-width: 30%;
+}
+
+.filefield-element .widget-edit {
+  float: left; /* RTL */
+  max-width: 70%;
+}
+
+.filefield-element .filefield-preview {
+  width: 16em;
+  overflow: hidden;
+}
+
+.filefield-element .widget-edit .form-item {
+  margin: 0 0 1em 0;
+}
+
+.filefield-element input.form-submit,
+.filefield-element input.form-file {
+  margin: 0;
+}
+
+.filefield-element input.progress-disabled {
+  float: none;
+  display: inline;
+}
+
+.filefield-element div.ahah-progress,
+.filefield-element div.throbber {
+  display: inline;
+  float: none;
+  padding: 1px 13px 2px 3px; /* RTL */
+}
+
+.filefield-element div.ahah-progress-bar {
+  display: none;
+  margin-top: 4px;
+  width: 28em;
+  padding: 0;
+}
+
+.filefield-element div.ahah-progress-bar div.bar {
+  margin: 0;
+}
+
+/* End general widget form styles. */
+/* $Id: nice_menus.css,v 1.28 2008/07/11 16:04:44 add1sun Exp $ */
+/*
+  This file contains the basic logic for nice menus, and should not be
+  edited.  To customize the menus, it's recommended to create a custom CSS
+  file using nice_menus_default.css as a template, then configure the module
+  to use your custom CSS file (this is done in the global settings tab of
+  the theme administration.)
+*/
+
+/* Below should fix menu being a few pixels away in some themes, and menus disappearing behind other stuff. */
+.block-nice_menus {
+  line-height: normal;
+  z-index: 10;
+}
+
+ul.nice-menu,
+ul.nice-menu ul {
+  z-index: 5;
+  position: relative;
+}
+
+ul.nice-menu li {
+  position: relative;
+}
+
+ul.nice-menu a {
+  display: block;
+}
+
+ul.nice-menu ul,
+/* For Garland header. */
+#header-region ul.nice-menu ul {
+  position: absolute;
+  visibility: hidden;
+}
+
+ul.nice-menu li.over ul {
+  visibility: visible;
+}
+
+ul.nice-menu ul li {
+  display: block;
+}
+
+ul.nice-menu:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* Show submenus when over their parents. */
+ul.nice-menu li:hover ul,
+ul.nice-menu li.menuparent li:hover ul,
+ul.nice-menu li.menuparent li.menuparent li:hover ul,
+ul.nice-menu li.menuparent li.menuparent li.menuparent li:hover ul,
+ul.nice-menu li.over ul,
+ul.nice-menu li.menuparent li.over ul,
+ul.nice-menu li.menuparent li.menuparent li.over ul,
+ul.nice-menu li.menuparent li.menuparent li.menuparent li.over ul,
+/* Repeat all this stuff just for Garland headers. */
+#header-region ul.nice-menu li:hover ul,
+#header-region ul.nice-menu li.menuparent li:hover ul,
+#header-region ul.nice-menu li.menuparent li.menuparent li:hover ul,
+#header-region ul.nice-menu li.over ul,
+#header-region ul.nice-menu li.menuparent li.over ul,
+#header-region ul.nice-menu li.menuparent li.menuparent li.over ul {
+  visibility: visible;
+}
+
+/* Hide sub-menus initially. */
+ul.nice-menu li:hover ul ul,
+ul.nice-menu li:hover ul ul ul,
+ul.nice-menu li:hover li:hover ul ul,
+ul.nice-menu li:hover li:hover ul ul ul,
+ul.nice-menu li:hover li:hover li:hover ul ul,
+ul.nice-menu li:hover li:hover li:hover ul ul ul,
+ul.nice-menu li.over ul ul,
+ul.nice-menu li.over ul ul ul,
+ul.nice-menu li.over li.over ul ul,
+ul.nice-menu li.over li.over ul ul ul,
+ul.nice-menu li.over li.over li.over ul ul,
+ul.nice-menu li.over li.over li.over ul ul ul,
+/* Repeat all this stuff just for Garland headers. */
+#header-region ul.nice-menu li:hover ul ul,
+#header-region ul.nice-menu li:hover ul ul ul,
+#header-region ul.nice-menu li:hover li:hover ul ul,
+#header-region ul.nice-menu li:hover li:hover ul ul ul,
+#header-region ul.nice-menu li:hover li:hover li:hover ul ul,
+#header-region ul.nice-menu li:hover li:hover li:hover ul ul ul,
+#header-region ul.nice-menu li.over ul ul,
+#header-region ul.nice-menu li.over ul ul ul,
+#header-region ul.nice-menu li.over li.over ul ul,
+#header-region ul.nice-menu li.over li.over ul ul ul,
+#header-region ul.nice-menu li.over li.over li.over ul ul,
+#header-region ul.nice-menu li.over li.over li.over ul ul ul {
+  visibility: hidden;
+}
+
+/***************
+ IE 6 Fixes
+***************/
+
+/* Iframe to fix z-index bug when menu hovers over <select> fields. */
+ul.nice-menu li.menuparent ul,
+/* For Garland header. */
+#header-region ul.nice-menu li.menuparent ul {
+	overflow: visible !important;
+	/* overflow: hidden; */
+}
+
+ul.nice-menu li.menuparent ul iframe,
+/* For Garland header. */
+#header-region ul.nice-menu li.menuparent ul iframe {
+	display: none;
+	display/**/: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	filter: mask();
+	width: 20px;
+	height: 20px;
+}/* $Id: nice_menus_default.css,v 1.10 2010/10/09 16:58:04 add1sun Exp $ */
+/*
+  This is the default layout template for nice menus, and will provide
+  a starting point for the look of your menus. To customize, it's
+  recommended to create a custom CSS file using this file as a template,
+  then configure the module to use your custom CSS file
+  (this is done in the global settings tab of the theme administration.)
+
+  See README.txt and the handbook page (http://drupal.org/node/185543)
+  for more information on using the CSS.
+*/
+
+/******************************
+ Global CSS for ALL menu types
+******************************/
+
+ul.nice-menu,
+ul.nice-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #ccc;
+}
+
+ul.nice-menu li {
+  border-top: 0;
+  float: left; /* LTR */
+	list-style-image: none;
+	border-right: 1px solid white;
+}
+ul.nice-menu li.last {
+	border-right: 0px solid white;
+}
+
+ul.nice-menu a {
+  padding: 0.3em 10px 0.3em 10px;
+	color: white;
+	font-size: 22px;
+	text-transform: lowercase;
+	font-weight: normal;
+	letter-spacing: 2px;
+	font-family: "Yanone Kaffeesatz", Arial, Helvetica, sans-serif;
+}
+
+ul.nice-menu ul {
+  top: 1.8em;
+  left: -1px; /* LTR */
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin-right: 0; /* LTR */
+}
+
+ul.nice-menu ul li {
+  width: 12.5em;
+}
+
+/******************************
+ VERTICAL (left/right) menus
+******************************/
+
+/* This is the default width of all vertical menus. */
+ul.nice-menu-right, ul.nice-menu-left,
+ul.nice-menu-right li, ul.nice-menu-left li {
+  width: 12.5em;
+}
+
+/* VERTICAL menus where submenus pop RIGHT (default). */
+ul.nice-menu-right ul {
+  width: 12.5em;
+  left: 12.5em;
+  top: -1px;
+}
+
+ul.nice-menu-right ul ul {
+  width: 12.5em;
+  left: 12.5em;
+  top: -1px;
+}
+
+ul.nice-menu-right li.menuparent,
+ul.nice-menu-right li li.menuparent {
+  background: #eee url(arrow-right.png) right center no-repeat;
+}
+
+ul.nice-menu-right li.menuparent:hover,
+ul.nice-menu-right li li.menuparent:hover {
+  background: #ccc url(arrow-right.png) right center no-repeat;
+}
+
+/* VERTICAL menus where submenus pop LEFT. */
+ul.nice-menu-left li ul {
+  width: 12.5em;
+  left: -12.65em;
+  top: -1px;
+}
+
+ul.nice-menu-left li ul li ul {
+  width: 12.5em;
+  left: -12.65em;
+  top: -1px;
+}
+
+ul.nice-menu-left li.menuparent,
+ul.nice-menu-left li li.menuparent {
+  background: #eee url(arrow-left.png) left center no-repeat;
+}
+
+ul.nice-menu-left li.menuparent:hover,
+ul.nice-menu-left li li.menuparent:hover {
+  background: #ccc url(arrow-left.png) left center no-repeat;
+}
+
+ul.nice-menu-left a, ul.nice-menu-left ul a {
+  padding-left: 14px;
+}
+
+/******************************
+ HORIZONTAL (down) menus
+******************************/
+
+ul.nice-menu-down {
+  float: left; /* LTR */
+  border: 0;
+}
+
+ul.nice-menu-down li {
+/*  border-top: 1px solid #ccc;*/
+}
+
+ul.nice-menu-down li li {
+  border-top: 0;
+}
+
+ul.nice-menu-down ul {
+  left: 0; /* LTR */
+}
+
+ul.nice-menu-down ul li {
+  clear: both;
+}
+
+ul.nice-menu-down li ul li ul {
+  left: 12.5em; /* LTR */
+  top: -1px;
+}
+
+ul.nice-menu-down .menuparent a {
+  padding-right: 15px; /* LTR */
+}
+
+ul.nice-menu-down li.menuparent {
+  background: #eee url(arrow-down.png) right center no-repeat; /* LTR */
+}
+
+ul.nice-menu-down li.menuparent:hover {
+  background: #ccc url(arrow-down.png) right center no-repeat; /* LTR */
+}
+
+ul.nice-menu-down li li.menuparent {
+  background: #eee url(arrow-right.png) right center no-repeat; /* LTR */
+}
+
+ul.nice-menu-down li li.menuparent:hover {
+  background: #ccc url(arrow-right.png) right center no-repeat; /* LTR */
+}
+
+/******************************
+ Garland-specific CSS
+******************************/
+
+/**
+ * Global CSS for ALL menu types
+ */
+ul.nice-menu li {
+  margin: 0;
+  padding-left: 0; /* LTR */
+  background-image: none;
+}
+
+#header-region ul.nice-menu li {
+  margin: 0;
+  /* Padding rules are needed to deal with Garland's header line-height. */
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  background: #eee;
+}
+
+#header-region ul.nice-menu ul {
+  top: 1.8em;
+  left: -1px; /* LTR */
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin-right: 0; /* LTR */
+}
+
+#header-region ul.nice-menu ul {
+  top: 1.7em;
+}
+
+/**
+ * HORIZONTAL (down) menus
+ */
+#header-region ul.nice-menu-down li ul li ul {
+  left: 12.5em; /* LTR */
+  top: -1px;
+}
+
+#header-region ul.nice-menu-down li.menuparent {
+  background: #eee url(arrow-down.png) right center no-repeat; /* LTR */
+}
+
+#header-region ul.nice-menu-down li.menuparent:hover {
+  background: #ccc url(arrow-down.png) right center no-repeat; /* LTR */
+}
+
+#header-region ul.nice-menu-down li li.menuparent {
+  background: #eee url(arrow-right.png) right center no-repeat; /* LTR */
+}
+
+#header-region ul.nice-menu-down li li.menuparent:hover {
+  background: #ccc url(arrow-right.png) right center no-repeat; /* LTR */
+}
+
+.node-unpublished {
+  background-color: #fff4f4;
+}
+.preview .node {
+  background-color: #ffffea;
+}
+#node-admin-filter ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+#node-admin-buttons {
+  float: left; /* LTR */
+  margin-left: 0.5em; /* LTR */
+  clear: right; /* LTR */
+}
+td.revision-current {
+  background: #ffc;
+}
+.node-form .form-text {
+  display: block;
+  width: 95%;
+}
+.node-form .container-inline .form-text {
+  display: inline;
+  width: auto;
+}
+.node-form .standard {
+  clear: both;
+}
+.node-form textarea {
+  display: block;
+  width: 95%;
+}
+.node-form .attachments fieldset {
+  float: none;
+  display: block;
+}
+.terms-inline {
+  display: inline;
+}
+/* $Id: regions.css,v 1.5.2.3 2010/03/27 23:10:17 himerus Exp $ */
+/**
+ * Omega, for Drupal 6.x
+ * Jake Strawn - http://himerus.com
+ * Project Page - http://drupal.org/project/omega
+ * 
+ * The regions.css file provides an overview of the available parent
+ * elements for the various regions of the page.tpl.php for easier 
+ * overriding at a glance.
+ *
+ *
+ * Omega CSS Table of Contents for regions.css
+ *
+ * 1.) Main Wrapper Regions
+ * 2.) Navigation & Header Regions
+ * 3.) Preface Regions
+ * 4.) Main Content Regions
+ * 5.) Sidebar Regions
+ * 6.) Postscript Regions
+ * 7.) Footer Regions
+ */ 
+ 
+/** ################# 1.) Main Wrapper Regions ####################### */
+
+#page {
+	
+}
+
+/** ################# 2.) Navigation & Header Regions ####################### */
+
+#site-header {
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+#internal-nav {
+	margin-bottom: 0;
+  margin-top: 20px;
+}
+
+#slogan-bcrumb {
+  
+}
+
+#branding {
+  
+}
+
+#site-menu {
+	
+}
+
+#header-first {
+	margin-top: 0;
+}
+
+#header-last {
+	margin-top: 0;
+}
+
+/** ################# 3.) Preface Regions ####################### */
+
+#preface-wrapper {
+	margin-top: 20px;
+}
+
+#preface-first {
+	
+}
+
+#preface-middle {
+  
+}
+
+#preface-last {
+	
+}
+
+/** ################# 4.) Main Content Regions ####################### */
+#main-content-container {
+  margin-top: 20px;	
+}
+#main-wrapper {
+	
+}
+
+#mission {
+  
+}
+
+#content-top {
+	margin-bottom: 20px;
+}
+
+#content-tabs {
+	
+}
+
+#main-content {
+	margin-bottom: 20px;
+}
+
+#content-bottom {
+	margin-bottom: 20px;
+}
+
+/** ################# 5.) Sidebar Regions ####################### */
+
+#sidebar-first {
+	
+}
+
+#sidebar-last {
+	
+}
+
+/** ################# 6.) Postscript Regions ####################### */
+
+#postscript-wrapper {
+  margin-bottom: 20px;
+}
+
+#postscript-one {
+  
+}
+
+#postscript-two {
+  
+}
+
+#postscript-three {
+  
+}
+
+#postscript-four {
+  
+}
+
+/** ################# 7.) Footer Regions ####################### */
+
+#footer-first {
+  
+}
+
+#footer-last {
+  
+}
+
+#footer-first, #footer-last {
+	margin-bottom: 0;
+}/* $Id: reset.css,v 1.2.2.2 2009/10/12 02:42:27 himerus Exp $ */
+
+/**
+ * Eric Meyer's Reset CSS
+ *
+ * v1.0 | 20080212
+ * http://meyerweb.com/eric/tools/css/reset/
+ *
+ * Changes to the original Reset CSS:
+ *   - "outline" attributes have been commented out for accessibility reasons
+ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+7E000C = RED
+0A2963 = BLUE
+727272 = DARK GREY
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Vollkorn);
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300);
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: "Vollkorn",Georgia, "Times New Roman", Times, serif;
+	font-weight: normal;
+	color: #0A2963;
+	margin-bottom: 5px;
+/*	text-shadow: #292929 1px 1px 2px;*/
+}
+h2,h4,h6 {
+/*	font-weight: bold;*/
+	color: #7E000C;
+/*	text-shadow: #292929 2px 2px 0px;*/
+}
+h1 {
+	font-size: 2.4em;
+}
+h2 {
+	font-size: 2.1em;
+}
+h2.title {
+	font-size: 3.4em;
+}
+h3 {
+	font-size: 1.8em;
+}
+h4 {
+	font-size: 1.5em;
+}
+h5 {
+	font-size: 1.3em;
+}
+h6 {
+	font-size: 1.1em;
+}
+#main-content h1,
+#main-content h2,
+#main-content h3,
+#main-content h4,
+#main-content h5,
+#main-content h6 {
+	font-variant: small-caps;
+}
+.sidebar h1,
+.sidebar h2,
+.sidebar h3,
+.sidebar h4,
+.sidebar h5,
+.sidebar h6 {
+	font-weight: bold;
+}
+p,
+.block p {
+	margin-bottom: 1em;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+	color: #3893C8;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+ul {
+	list-style-position: inside;
+}
+ol {
+	list-style-position: outside;
+	margin-left: 2em;
+	padding-left: 1em;
+}
+ol li {
+	padding-bottom: 1em;
+}
+ul li {
+	list-style-image: url('../images/bullet-star.png');
+	line-height: 1.4em;
+	margin-bottom: 1em;
+}
+
+/*PDF DOWNLOADS (ATTACHMENTS / LINKS)---------------*/
+#attachments a.pdf {
+	background: url('../images/pdf.png')  no-repeat scroll top left;
+	padding-left: 20px;
+/*	line-height: 18px;*/
+}
+
+
+#page {
+	background: #464646 url('../images/bg_header.png')  repeat-x scroll top left;
+}
+
+#site-header {
+	height: 157px;
+	margin-top: 0;
+	position: relative;
+/*	padding-bottom: 10px;*/
+}
+#site-header,
+#navigation,
+#main-content-container,
+#messages {
+/*	background-color: #393939;*/
+}
+#navigation {
+	margin-bottom: 10px;
+}
+#preface-wrapper {
+	background: url('../images/bg-preface-wrapper.jpg')  no-repeat scroll top center;
+	height: 299px;
+}
+
+
+#main-content-container {
+	background-color: #DFDED9;
+	margin-top: 0;
+	padding-top: 30px;
+}
+
+#nice-menu-0 {
+	position: relative;
+	top: 135px;
+}
+#main-wrapper {
+/*	border-top: 1px solid #3B5562;*/
+}
+#main-inner-wrapper {
+	margin-right: 40px;
+}
+#bottomRunner {
+	background: #000 url('../images/bg_footer.jpg')  no-repeat scroll top center;
+	min-height: 160px;
+	position: relative;
+	padding-bottom: 30px;
+}
+#postscript-wrapper {
+	margin-bottom: 0;
+	padding-top: 10px;
+}
+#postscript-wrapper,
+#footer-wrapper {
+/*	background-color: #0A2963;*/
+/*	border-top: 5px solid #fff;*/
+	font-size: .8em;
+/*	text-align: center;*/
+}
+#logo {
+	position: absolute;
+	top: 10px;
+	left: 188px;
+}
+#loginout {
+	text-align: center;
+	background-color: black;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+}
+#loginout p {
+	padding: .5em 0;
+	margin: 0;
+}
+
+.block-region {
+	color: #222;
+}
+
+
+
+#directors {
+	width: 200px;
+	height: 40px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+#directors span {
+	display: block;
+	font-family: Trebuchet, Arial, Helvetica, sans-serif;
+	color: white;
+}
+#directors .dName {
+	font-size: 13px;
+	font-weight: bold;
+}
+#directors .dTitle {
+	font-size: 12px;
+	font-weight: normal;
+}
+
+/*MISSION/PHOTO Block on Home Page-------------*/
+#block-block-1 {
+	margin-top: 15px;
+}
+
+
+
+.node {
+	border-color: #ccc;
+}
+
+
+
+
+/*SIDEBARS -------------------------------*/
+#sidebar-first-inner {
+	width: 142px;
+}
+
+.sidebar ul {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+
+
+/*SIDEBAR-FIRST -------------*/
+
+/*SIDEBAR-LAST --------------*/
+#sidebar-last {
+	margin-left: 0;
+}
+
+.field-field-page-photo {
+	float: right;
+	margin-left: 20px;
+	margin-bottom: 10px;
+	-moz-box-shadow: -3px 3px 7px #ccc;
+	-webkit-box-shadow: -3px 3px 7px #ccc;
+	box-shadow: -3px 3px 7px #ccc;
+	
+}
+
+.view-issues span.more {
+	font-size: .5em;
+	letter-spacing: 1px;
+}
+.view-issues .views-row {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 1em;
+	margin-bottom: 1em;
+}
+
+
+
+
+
+/*BANNER IMAGE AREA ---------------*/
+#preface-wrapper .view-banner-rotator {
+	position: relative;
+	top: 20px;
+}
+.view-banner-rotator .views-row {
+	border: 5px solid #FFF;
+}
+.view-banner-rotator .views-row img {
+	display: block;
+}
+.bannerOverlay {
+	background: url('../images/overlay_banner.png')  repeat-x scroll top left;
+	width: 950px;
+	height: 10px;
+	position: absolute;
+	top:0;
+	left: 0px;
+	z-index: 30;
+}
+
+/*------------SOCIAL MEDIA LINKS ------------*/
+#block-block-3 {
+	text-align: right;
+}
+
+#socialIcons {
+/*	height: 34px;*/
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#socialIcons a.thumbnail {
+	background-image: url('../images/social-sprites.png');
+	background-repeat: no-repeat;
+	text-indent: 9000px;
+	overflow: hidden;
+	cursor: pointer;
+	display: block;
+	padding: 0;
+	margin: 0;
+	margin-left: 20px;
+	width: 24px;
+	height: 24px;
+/*	position: relative;*/
+	float: right;
+}
+#socialIcons a#facebook {
+	background-position: -24px 0px;
+}
+a#facebook:hover {
+/*	background-position: 0px -86px;*/
+}
+#socialIcons a#twitter {
+	background-position: -48px 0px;
+}
+a#twitter:hover {
+/*	background-position: -43px -86px;*/
+}
+#socialIcons a#youtube {
+	background-position: -168px 0px;
+}
+a#youtube:hover {
+/*	background-position: 0px -32px;*/
+}
+
+
+
+
+.breadcrumb {
+	color: #BDBDBD;
+}
+.imgLeft {
+	border: 3px solid #ccc;
+	float: left;
+	margin-right: 2em;
+	margin-bottom: 1em;
+}
+.clearme {
+	clear: both;
+}
+
+
+
+
+
+/*TYPOGRAPHY ========================================*/
+
+body {
+	color: #505050;
+	font-family: "Rosario", Arial, Helvetica, sans-serif;
+	font-size: .9em;
+}
+
+#footer-first {
+	margin-top: 10px;
+}
+
+#postscript-wrapper,
+#footer-wrapper {
+	color: #CFCACA;
+	font-size: .8em;
+}
+#postscript-wrapper a,
+#footer-wrapper a {
+	color: #BACEF2;
+	font-weight: bold;
+}
+#postscript-wrapper a:hover,
+#footer-wrapper a:hover {
+	text-decoration: none;
+	color: #ffc;
+}
+#block-block-4 {
+	text-align: center;
+}
+
+#block-block-7 {
+	text-align: center;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+	padding: 5px;
+	border: 1px solid;
+	margin: 20px 0 10px 0;
+}
+
+/*NEWS -------------------------------------*/
+.view-news .views-row {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 1em;
+	margin-bottom: 1em;
+}
+.view-news .news-image {
+	float: right;
+	margin-left: 10px;
+	margin-bottom: 20px;
+}
+.view-news .news-image img {
+	border: 5px solid #ccc;
+}
+
+.view-news .submitted {
+	color: #848484;
+	float: left;
+	width: 100px;
+	margin-right: 20px;
+	padding: 5px 3px;
+	border-right: 1px solid #ccc;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.view-news .submitted .field-news-day {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 36px;
+	display: block;
+}
+.view-news .submitted .field-news-month {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.view-news .node-body {
+	clear: both;
+}
+
+
+
+/*FORMS ========================================*/
+input[type="text"],
+input[type="password"],
+textarea {
+	color: #5D5D5D;
+	border:1px solid #ccc;
+	padding: 3px 5px;
+	font-size: 1.2em;
+	width: 300px;
+}
+.sidebar input[type="text"] {
+	color: #5D5D5D;
+	width: 150px;
+}
+.sidebar input[type="submit"] {
+	background-color: #7E000C;
+	color: #fff;
+	border:3px solid #fff;
+	padding: 4px 7px;
+	font-size: 1.2em;
+}
+form.webform-client-form label {
+	color: #B4B4B4;
+	text-transform: uppercase;
+}
+
+/*STAFF PAGE +++++++++++++++++++++++++++++*/
+.view-staff .staff-photo {
+	width: 245px;
+	float: left;
+}
+.view-staff .staff-photo img {
+	border: 5px solid #fff;
+	-moz-box-shadow: 5px 5px 7px #999;
+	-webkit-box-shadow: 5px 5px 7px #999;
+	box-shadow: 5px 5px 7px #999;
+}
+.view-staff .editLink {
+	width: 205px;
+	text-align: center;
+}
+.view-staff .staff-info {
+	margin-left: 250px;
+}
+.view-staff .row {
+	padding-bottom: 20px;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 30px;
+}
+
+
+
+/*PROCESS Page ------*/
+h3.process {
+	background-color: #732327;
+	color: white;
+	padding: 5px 30px;
+	display: inline-block;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	
+}
+
+
+
+#site-menu li{
+	text-align: left;
+}
+
+.help {
+	background-color: #E3E3E3;
+	border-width: 0;
+}
+.clearme {
+	clear: both;
+}
+
+/*Administration +++++++++++++++++++++++++++*/
+tr.even, tr.odd {
+	background-color: #E3E3E3;
+	border-bottom: 1px solid #fff;
+}
+.description {
+	color: #FCFFDB;
+}
+div.admin-dependencies, 
+div.admin-required {
+	color: #CCC;
+}
+div.status {
+	background-color: #E3E3E3;
+	color: #333;
+	border-color: #E3E3E3;
+}
+.messages {
+	margin: 20px 0;
+}
+
+/*Partner's Plan*/
+table#partnerTable th,
+table#partnerTable2 th {
+	padding: .5em;
+}
+table#partnerTable td,
+table#partnerTable2 td {
+	padding: .5em;
+	border-bottom: 1px solid #A9A9A9;
+	border-right: 1px solid #A9A9A9;
+}
+table#partnerTable td:last-child,
+table#partnerTable2 td:last-child {
+	border-right: 0px solid #A9A9A9;
+}
+small {
+	font-size: 85%;
+}
+
+/*Fishin 4 Mission page*/
+table tr.silver {
+	font-size: 130%;
+}
+.kids-derby,
+#fishRegister {
+	border: 1px solid #606060;
+	padding: 20px;
+}
+.kids-derby h3 {
+	font-family: "Comic Sans MS",cursive,Arial,Helvetica,sans-serif;
+	text-align: center;
+}
+.SOMETHING {
+	font-size: 140%;
+}
+#node-page-53 td {
+	text-align: center;
+	vertical-align: middle;
+}
+#fishRegister {
+	text-align: center;
+	margin-bottom: 1em;
+}
+/*Reset Attachments Table Alignment*/
+#node-page-53 #attachments td {
+	text-align: left;
+}
+/*
+** HTML elements
+*/
+body.drag {
+  cursor: move;
+}
+th.active img {
+  display: inline;
+}
+tr.even, tr.odd {
+  background-color: #eee;
+  border-bottom: 1px solid #ccc;
+  padding: 0.1em 0.6em;
+}
+tr.drag {
+  background-color: #fffff0;
+}
+tr.drag-previous {
+  background-color: #ffd;
+}
+td.active {
+  background-color: #ddd;
+}
+td.checkbox, th.checkbox {
+  text-align: center;
+}
+tbody {
+  border-top: 1px solid #ccc;
+}
+tbody th {
+  border-bottom: 1px solid #ccc;
+}
+thead th {
+  text-align: left; /* LTR */
+  padding-right: 1em; /* LTR */
+  border-bottom: 3px solid #ccc;
+}
+
+/*
+** Other common styles
+*/
+.breadcrumb {
+  padding-bottom: .5em
+}
+div.indentation {
+  width: 20px;
+  height: 1.7em;
+  margin: -0.4em 0.2em -0.4em -0.4em; /* LTR */
+  padding: 0.42em 0 0.42em 0.6em; /* LTR */
+  float: left; /* LTR */
+}
+div.tree-child {
+  background: url(../../misc/tree.png) no-repeat 11px center; /* LTR */
+}
+div.tree-child-last {
+  background: url(../../misc/tree-bottom.png) no-repeat 11px center; /* LTR */
+}
+div.tree-child-horizontal {
+  background: url(../../misc/tree.png) no-repeat -11px center;
+}
+.error {
+  color: #e55;
+}
+div.error {
+  border: 1px solid #d77;
+}
+div.error, tr.error {
+  background: #fcc;
+  color: #200;
+  padding: 2px;
+}
+.warning {
+  color: #e09010;
+}
+div.warning {
+  border: 1px solid #f0c020;
+}
+div.warning, tr.warning {
+  background: #ffd;
+  color: #220;
+  padding: 2px;
+}
+.ok {
+  color: #008000;
+}
+div.ok {
+  border: 1px solid #00aa00;
+}
+div.ok, tr.ok {
+  background: #dfd;
+  color: #020;
+  padding: 2px;
+}
+.item-list .icon {
+  color: #555;
+  float: right; /* LTR */
+  padding-left: 0.25em; /* LTR */
+  clear: right; /* LTR */
+}
+.item-list .title {
+  font-weight: bold;
+}
+.item-list ul {
+  margin: 0 0 0.75em 0;
+  padding: 0;
+}
+.item-list ul li {
+  margin: 0 0 0.25em 1.5em; /* LTR */
+  padding: 0;
+  list-style: disc;
+}
+ol.task-list li.active {
+  font-weight: bold;
+}
+.form-item {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+tr.odd .form-item, tr.even .form-item {
+  margin-top: 0;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+tr.merge-down, tr.merge-down td, tr.merge-down th {
+  border-bottom-width: 0 !important;
+}
+tr.merge-up, tr.merge-up td, tr.merge-up th {
+  border-top-width: 0 !important;
+}
+.form-item input.error, .form-item textarea.error, .form-item select.error {
+  border: 2px solid red;
+}
+.form-item .description {
+  font-size: 0.85em;
+}
+.form-item label {
+  display: block;
+  font-weight: bold;
+}
+.form-item label.option {
+  display: inline;
+  font-weight: normal;
+}
+.form-checkboxes, .form-radios {
+  margin: 1em 0;
+}
+.form-checkboxes .form-item, .form-radios .form-item {
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+.marker, .form-required {
+  color: #f00;
+}
+.more-link {
+  text-align: right; /* LTR */
+}
+.more-help-link {
+  font-size: 0.85em;
+  text-align: right; /* LTR */
+}
+.nowrap {
+  white-space: nowrap;
+}
+.item-list .pager {
+  clear: both;
+  text-align: center;
+}
+.item-list .pager li {
+  background-image:none;
+  display:inline;
+  list-style-type:none;
+  padding: 0.5em;
+}
+.pager-current {
+  font-weight:bold;
+}
+.tips {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 0.9em;
+}
+dl.multiselect dd.b, dl.multiselect dd.b .form-item, dl.multiselect dd.b select {
+  font-family: inherit;
+  font-size: inherit;
+  width: 14em;
+}
+dl.multiselect dd.a, dl.multiselect dd.a .form-item {
+  width: 10em;
+}
+dl.multiselect dt, dl.multiselect dd {
+  float: left; /* LTR */
+  line-height: 1.75em;
+  padding: 0;
+  margin: 0 1em 0 0; /* LTR */
+}
+dl.multiselect .form-item {
+  height: 1.75em;
+  margin: 0;
+}
+
+/*
+** Inline items (need to override above)
+*/
+.container-inline div, .container-inline label {
+  display: inline;
+}
+
+/*
+** Tab navigation
+*/
+ul.primary {
+  border-collapse: collapse;
+  padding: 0 0 0 1em; /* LTR */
+  white-space: nowrap;
+  list-style: none;
+  margin: 5px;
+  height: auto;
+  line-height: normal;
+  border-bottom: 1px solid #bbb;
+}
+ul.primary li {
+  display: inline;
+}
+ul.primary li a {
+  background-color: #ddd;
+  border-color: #bbb;
+  border-width: 1px;
+  border-style: solid solid none solid;
+  height: auto;
+  margin-right: 0.5em; /* LTR */
+  padding: 0 1em;
+  text-decoration: none;
+}
+ul.primary li.active a {
+  background-color: #fff;
+  border: 1px solid #bbb;
+  border-bottom: #fff 1px solid;
+}
+ul.primary li a:hover {
+  background-color: #eee;
+  border-color: #ccc;
+  border-bottom-color: #eee;
+}
+ul.secondary {
+  border-bottom: 1px solid #bbb;
+  padding: 0.5em 1em;
+  margin: 5px;
+}
+ul.secondary li {
+  display: inline;
+  padding: 0 1em;
+  border-right: 1px solid #ccc; /* LTR */
+}
+ul.secondary a {
+  padding: 0;
+  text-decoration: none;
+}
+ul.secondary a.active {
+  border-bottom: 4px solid #999;
+}
+
+/*
+** Autocomplete styles
+*/
+/* Suggestion list */
+#autocomplete {
+  position: absolute;
+  border: 1px solid;
+  overflow: hidden;
+  z-index: 100;
+}
+#autocomplete ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#autocomplete li {
+  background: #fff;
+  color: #000;
+  white-space: pre;
+  cursor: default;
+}
+#autocomplete li.selected {
+  background: #0072b9;
+  color: #fff;
+}
+/* Animated throbber */
+html.js input.form-autocomplete {
+  background-image: url(../../misc/throbber.gif);
+  background-repeat: no-repeat;
+  background-position: 100% 2px; /* LTR */
+}
+html.js input.throbbing {
+  background-position: 100% -18px; /* LTR */
+}
+
+/*
+** Collapsing fieldsets
+*/
+html.js fieldset.collapsed {
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  margin-bottom: 0;
+  height: 1em;
+}
+html.js fieldset.collapsed * {
+  display: none;
+}
+html.js fieldset.collapsed legend {
+  display: block;
+}
+html.js fieldset.collapsible legend a {
+  padding-left: 15px; /* LTR */
+  background: url(../../misc/menu-expanded.png) 5px 75% no-repeat; /* LTR */
+}
+html.js fieldset.collapsed legend a {
+  background-image: url(../../misc/menu-collapsed.png); /* LTR */
+  background-position: 5px 50%; /* LTR */
+}
+/* Note: IE-only fix due to '* html' (breaks Konqueror otherwise). */
+* html.js fieldset.collapsed legend,
+* html.js fieldset.collapsed legend *,
+* html.js fieldset.collapsed table * {
+  display: inline;
+}
+/* For Safari 2 to prevent collapsible fieldsets containing tables from dissapearing due to tableheader.js. */
+html.js fieldset.collapsible {
+  position: relative;
+}
+html.js fieldset.collapsible legend a {
+  display: block;
+}
+/* Avoid jumping around due to margins collapsing into collapsible fieldset border */
+html.js fieldset.collapsible .fieldset-wrapper {
+  overflow: auto;
+}
+
+/*
+** Resizable text areas
+*/
+.resizable-textarea {
+  width: 95%;
+}
+.resizable-textarea .grippie {
+  height: 9px;
+  overflow: hidden;
+  background: #eee url(../../misc/grippie.png) no-repeat center 2px;
+  border: 1px solid #ddd;
+  border-top-width: 0;
+  cursor: s-resize;
+}
+html.js .resizable-textarea textarea {
+  margin-bottom: 0;
+  width: 100%;
+  display: block;
+}
+
+/*
+** Table drag and drop.
+*/
+.draggable a.tabledrag-handle {
+  cursor: move;
+  float: left; /* LTR */
+  height: 1.7em;
+  margin: -0.4em 0 -0.4em -0.5em; /* LTR */
+  padding: 0.42em 1.5em 0.42em 0.5em; /* LTR */
+  text-decoration: none;
+}
+a.tabledrag-handle:hover {
+  text-decoration: none;
+}
+a.tabledrag-handle .handle {
+  margin-top: 4px;
+  height: 13px;
+  width: 13px;
+  background: url(../../misc/draggable.png) no-repeat 0 0;
+}
+a.tabledrag-handle-hover .handle {
+  background-position: 0 -20px;
+}
+
+/*
+** Teaser splitter
+*/
+.joined + .grippie {
+  height: 5px;
+  background-position: center 1px;
+  margin-bottom: -2px;
+}
+/* Keeps inner content contained in Opera 9. */
+.teaser-checkbox {
+  padding-top: 1px;
+}
+div.teaser-button-wrapper {
+  float: right; /* LTR */
+  padding-right: 5%; /* LTR */
+  margin: 0;
+}
+.teaser-checkbox div.form-item {
+  float: right; /* LTR */
+  margin: 0 5% 0 0; /* LTR */
+  padding: 0;
+}
+textarea.teaser {
+  display: none;
+}
+html.js .no-js {
+  display: none;
+}
+
+/*
+** Progressbar styles
+*/
+.progress {
+  font-weight: bold;
+}
+.progress .bar {
+  background: #fff url(../../misc/progress.gif);
+  border: 1px solid #00375a;
+  height: 1.5em;
+  margin: 0 0.2em;
+}
+.progress .filled {
+  background: #0072b9;
+  height: 1em;
+  border-bottom: 0.5em solid #004a73;
+  width: 0%;
+}
+.progress .percentage {
+  float: right; /* LTR */
+}
+.progress-disabled {
+  float: left; /* LTR */
+}
+.ahah-progress {
+  float: left; /* LTR */
+}
+.ahah-progress .throbber {
+  width: 15px;
+  height: 15px;
+  margin: 2px;
+  background: transparent url(../../misc/throbber.gif) no-repeat 0px -18px;
+  float: left; /* LTR */
+}
+tr .ahah-progress .throbber {
+  margin: 0 2px;
+}
+.ahah-progress-bar {
+  width: 16em;
+}
+
+/*
+** Formatting for welcome page
+*/
+#first-time strong {
+  display: block;
+  padding: 1.5em 0 .5em;
+}
+
+/*
+** To be used with tableselect.js
+*/
+tr.selected td {
+  background: #ffc;
+}
+
+/*
+** Floating header for tableheader.js
+*/
+table.sticky-header {
+  margin-top: 0;
+  background: #fff;
+}
+
+/*
+** Installation clean URLs
+*/
+#clean-url.install {
+  display: none;
+}
+
+/*
+** For anything you want to hide on page load when JS is enabled, so
+** that you can use the JS to control visibility and avoid flicker.
+*/
+html.js .js-hide {
+  display: none;
+}
+
+/*
+** Styles for the system modules page (admin/build/modules)
+*/
+#system-modules div.incompatible {
+  font-weight: bold;
+}
+
+/*
+** Styles for the system themes page (admin/build/themes)
+*/
+#system-themes-form div.incompatible {
+  font-weight: bold;
+}
+
+/*
+** Password strength indicator
+*/
+span.password-strength {
+  visibility: hidden;
+}
+input.password-field {
+  margin-right: 10px; /* LTR */
+}
+div.password-description {
+  padding: 0 2px;
+  margin: 4px 0 0 0;
+  font-size: 0.85em;
+  max-width: 500px;
+}
+div.password-description ul {
+  margin-bottom: 0;
+}
+.password-parent {
+  margin: 0 0 0 0;
+}
+/*
+** Password confirmation checker
+*/
+input.password-confirm {
+  margin-right: 10px; /* LTR */
+}
+.confirm-parent {
+  margin: 5px 0 0 0;
+}
+span.password-confirm {
+  visibility: hidden;
+}
+span.password-confirm span {
+  font-weight: normal;
+}
+
+ul.menu {
+  list-style: none;
+  border: none;
+  text-align:left; /* LTR */
+}
+ul.menu li {
+  margin: 0 0 0 0.5em; /* LTR */
+}
+li.expanded {
+  list-style-type: circle;
+  list-style-image: url(../../misc/menu-expanded.png);
+  padding: 0.2em 0.5em 0 0; /* LTR */
+  margin: 0;
+}
+li.collapsed {
+  list-style-type: disc;
+  list-style-image: url(../../misc/menu-collapsed.png); /* LTR */
+  padding: 0.2em 0.5em 0 0; /* LTR */
+  margin: 0;
+}
+li.leaf {
+  list-style-type: square;
+  list-style-image: url(../../misc/menu-leaf.png);
+  padding: 0.2em 0.5em 0 0; /* LTR */
+  margin: 0;
+}
+li a.active {
+  color: #000;
+}
+td.menu-disabled {
+  background: #ccc;
+}
+ul.links {
+  margin: 0;
+  padding: 0;
+}
+ul.links.inline {
+  display: inline;
+}
+ul.links li {
+  display: inline;
+  list-style-type: none;
+  padding: 0 0.5em;
+}
+.block ul {
+  margin: 0;
+  padding: 0 0 0.25em 1em; /* LTR */
+}
+/* $Id: text.css,v 1.6.2.4 2010/03/27 23:10:17 himerus Exp $ */
+/**
+ * Omega, for Drupal 6.x
+ * Jake Strawn - http://himerus.com
+ * Project Page - http://drupal.org/project/omega
+ * 
+ * The text.css file should not contain any styles other than basic
+ * font manipulation. 
+ */
+ 
+/** ################# Custom CSS Styles ####################### */
+body {
+  font: 13px/1.5 Verdana,Helvetica,Arial,sans-serif;
+}
+
+a:link, a:visited {
+  color: #202124;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #0062A0;
+  text-decoration: none;
+}
+
+a:active, a.active {
+  color: #202124;
+  text-decoration: none;
+  color: #000;
+}
+
+hr {
+  margin: 0;
+  padding: 0;
+  border: none;
+  height: 1px;
+  background: #5294c1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.05em;
+	font-family: Georgia, 'Times New Roman', serif;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+/* make it a bit smaller for block headers */
+.block h2 {
+  font-size: 18px;
+  margin: 0;	
+}
+
+h3 {
+  font-size: 21px;
+}
+
+h4 {
+  font-size: 19px;
+}
+
+h5 {
+  font-size: 17px;
+}
+
+h6 {
+  font-size: 15px;
+}
+
+ol {
+  list-style: decimal;
+}
+
+ul {
+  list-style: square;
+}
+
+p,
+dl,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+pre,
+table,
+address,
+fieldset {
+  margin-bottom: 20px;
+}
+
+dt, .admin h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+dd {
+  padding-left: 10px;
+  font-size: 0.9em;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+dl {
+  
+}
+
+#permissions td.module {
+  font-weight: bold;
+}
+#permissions td.permission {
+  padding-left: 1.5em; /* LTR */
+}
+#access-rules .access-type, #access-rules .rule-type {
+  margin-right: 1em; /* LTR */
+  float: left; /* LTR */
+}
+#access-rules .access-type .form-item, #access-rules .rule-type .form-item {
+  margin-top: 0;
+}
+#access-rules .mask {
+  clear: both;
+}
+#user-login-form {
+  text-align: center;
+}
+#user-admin-filter ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+#user-admin-buttons {
+  float: left; /* LTR */
+  margin-left: 0.5em; /* LTR */
+  clear: right; /* LTR */
+}
+#user-admin-settings fieldset .description {
+  font-size: 0.85em;
+  padding-bottom: .5em;
+}
+
+/* Generated by user.module but used by profile.module: */
+.profile {
+  clear: both;
+  margin: 1em 0;
+}
+.profile .picture {
+  float: right; /* LTR */
+  margin: 0 1em 1em 0; /* LTR */
+}
+.profile h3 {
+  border-bottom: 1px solid #ccc;
+}
+.profile dl {
+  margin: 0 0 1.5em 0;
+}
+.profile dt {
+  margin: 0 0 0.2em 0;
+  font-weight: bold;
+}
+.profile dd {
+  margin: 0 0 1em 0;
+}
+.views-exposed-form .views-exposed-widget {
+  float: left; /* LTR */
+  padding: .5em 1em 0 0; /* LTR */
+}
+
+.views-exposed-form .views-exposed-widget .form-submit {
+  margin-top: 1.6em;
+}
+
+.views-exposed-form .form-item,
+.views-exposed-form .form-submit {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.views-exposed-form label {
+  font-weight: bold;
+}
+
+.views-exposed-widgets {
+  margin-bottom: .5em;
+}
+
+html.js a.views-throbbing,
+html.js span.views-throbbing {
+  background:url(../images/status-active.gif) no-repeat right center;
+  padding-right:18px;
+}
+
+/* administrative hover links */
+
+div.view div.views-admin-links {
+  font-size: xx-small;
+  margin-right: 1em;
+  margin-top: 1em;
+/*  width: 95%; */
+}
+
+.block div.view div.views-admin-links {
+  margin-top: 0;
+}
+
+div.view div.views-admin-links ul {
+  margin: 0;
+  padding: 0;
+}
+
+div.view div.views-admin-links li {
+  margin: 0;
+  padding: 0 0 2px 0;
+  z-index: 201;
+}
+
+div.view div.views-admin-links li a {
+  padding: 0;
+  margin: 0;
+  color: #ccc;
+}
+
+div.view div.views-admin-links li a:before {
+  content: "[";
+}
+div.view div.views-admin-links li a:after {
+  content: "]";
+}
+
+div.view div.views-admin-links-hover a,
+div.view div.views-admin-links:hover a {
+  color: #000;
+}
+
+div.view div.views-admin-links-hover,
+div.view div.views-admin-links:hover {
+  background: transparent;
+}
+
+div.view div.views-hide {
+  display: none;
+}
+
+/** For IE we add the class via js; for other browsers we rely on :hover **/
+div.view div.views-hide-hover,
+div.view:hover div.views-hide {
+  display: block;
+  position: absolute;
+  z-index: 200;
+}
+
+/* don't do this one in IE */
+div.view:hover div.views-hide {
+  margin-top: -1.5em;
+}
+
+/* Remove the border on tbody that system puts in */
+.views-view-grid tbody {
+  border-top: none;
+}
+
+
+.views_slideshow_singleframe_no_display,
+.views_slideshow_singleframe_hidden,
+.views_slideshow_singleframe_controls,
+.views_slideshow_singleframe_image_count {
+  display: none;
+}
+
+/* Pager Settings */
+
+.views_slideshow_singleframe_pager div a img {
+  width: 75px;
+  height: 75px;
+}
+
+.views_slideshow_singleframe_pager div {
+  display: inline;
+  padding-left: 10px;
+}
+
+.views_slideshow_singleframe_pager.thumbnails a.activeSlide img {
+  border: 3px solid #000;
+}
+
+.views_slideshow_singleframe_pager.numbered a.activeSlide {
+  text-decoration: underline;
+}

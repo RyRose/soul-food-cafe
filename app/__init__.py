@@ -1,11 +1,5 @@
-import sqlite3
-from flask import Flask, request, session, g, redirect, url_for, \
-             abort, render_template, flash
-
+from flask import Flask, flash, abort, session, render_template, redirect, request, url_for
 app = Flask(__name__)
-app.config.from_envvar('DB.ini', silent=True)
-app.debug = True
-app.secret_key = b'\x90\xef\xf4\x0f\x19P\xf9\xaa\x84D\t\x84\xdc\x19K\x87\xbe\xddZQ\x15\x1654'
 
 @app.route("/")
 def index():
@@ -14,15 +8,18 @@ def index():
 
 @app.route("/login", methods = ['GET', 'POST'])
 def login():
+    flash("what!")
     if request.method == "GET":
         return render_template("login.html", page_title="Login")
 
     elif request.method == "POST":
         # TODO: Check with database if user is in it.
-        username = request.form['username']
-        session['username'] = username
 
-        if (username, request.form['password']) == ('admin', 'admin'):
+        username = request.form['username']
+        password = request.form['password']
+
+        if username == password == 'admin':
+            session['username'] = username
             return redirect(url_for('donations'))
         else:
             return render_template("login.html", page_title="Login", invalid=True)
@@ -39,12 +36,7 @@ def register():
 
 @app.route("/donations")
 def donations():
-    # TODO: Add check for username in session. Store as cookie? Look up on internet.
-
     if 'username' in session:
         return render_template("donations.html", page_title="Donations", name=session['username'])
     else:
-        abort(403)
-
-if __name__ == "__main__":
-    app.run()
+        abort(418)

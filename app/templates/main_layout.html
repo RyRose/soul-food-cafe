@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Soul Food Café Mission</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+        <!-- SFCM -->
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/original_site.css') }}" />
+        <script src="{{ url_for('static', filename='js/original_site.js') }}"></script>
+        <link href='https://fonts.googleapis.com/css?family=Rosario' rel='stylesheet' type='text/css'>
+        <script type="text/javascript">
+            <!--//--><![CDATA[//><!--
+            jQuery.extend(Drupal.settings, { "basePath": "/", "nice_menus_options": { "delay": 800, "speed": 1 }, "viewsSlideshowSingleFrame": { "#views_slideshow_singleframe_main_banner_rotator-block_1": { "num_divs": 26, "id_prefix": "#views_slideshow_singleframe_main_", "div_prefix": "#views_slideshow_singleframe_div_", "vss_id": "banner_rotator-block_1", "timeout": 5000, "sort": 1, "effect": "fade", "speed": 700, "start_paused": 0, "delay": 0, "fixed_height": 1, "random": 0, "pause": 1, "pause_on_click": 0, "pause_when_hidden": 0, "pause_when_hidden_type": "full", "amount_allowed_visible": "", "remember_slide": 0, "remember_slide_days": 1, "controls": 0, "items_per_slide": 1, "pager": 0, "pager_type": "Numbered", "pager_hover": 2, "pager_click_to_page": 0, "image_count": 0, "nowrap": 0, "sync": 1, "advanced": "", "ie": { "cleartype": "true", "cleartypenobg": "false" } } } });
+            //--><!]]>
+        </script>
+
+        <!-- Hendrix -->
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/site.css') }}" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        {% block head %}{% endblock %}
+    </head>
+
+    <body class="front node-type-page no-sidebars">
+        <div id="page" class="clearfix">
+            <div id="site-header" class="container-16 clearfix">
+                <div id="directors">
+                    <span class="dName">TEST</span>
+                </div> 
+                <div id="branding" class="grid-4">
+                    <div id="logo"> 
+                        <a href="/" class="active"><img src="{{ url_for('static', filename='images/logo.png')  }}" alt="Soul Food Café Mission" title="Soul Food Café Mission" width="583" height="91" /></a>        
+                    </div>
+                </div>
+                <div><ul class="nice-menu nice-menu-down" id="nice-menu-0">
+                        <li class="menu-311 menu-path-front front first odd "><a href="#" title="Home" >home</a></li>
+                        <li class="menu-336 menu-path-node-2 even "><a href="#" title="About">About</a></li>
+                        <li class="menu-403 menu-path-staff odd "><a href="#">staff</a></li>
+                        <li class="menu-551 menu-path-node-11 even "><a href="#" title="SFCM Building Fund">Building Fund</a></li>
+                        <li class="menu-550 menu-path-node-10 odd "><a href="#" title="Soul Food Cafe Mission Schedule">Schedule</a></li>
+                        <li class="menu-496 menu-path-node-9 even "><a href="#" title="Contact Us">Contact Us</a></li>
+                        <li class="menu-650 menu-path-node-15 odd "><a href="#" title="The Process">The Process</a></li>
+                        <li class="menu-652 menu-path-node-20 even "><a href="#" title="Donate">Donate</a></li>
+                        <li class="menu-753 menu-path-node-52 odd "><a href="#" title="Partner&#039;s Plan">Partner</a></li>
+                        <li class="menu-800 menu-path-node-10 even last"><a href="login">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="preface-wrapper" class="container-16 clearfix">
+                <div id="preface-first" class="preface grid-7">
+                    <div id="block-block-1" class="block block-block">
+
+                        <div class="content">
+                            <p><img alt="" src="{{ url_for('static', filename='images/home-photo.png') }}" /></p>
+                        </div>
+                    </div>
+                </div><!-- /#preface-first -->
+                <div id="preface-middle" class="preface grid-9">
+                    <div id="block-views-banner_rotator-block_1" class="block block-views">
+                        <div class="content">
+                            <div class="view view-banner-rotator view-id-banner_rotator view-display-id-block_1 view-dom-id-2">
+
+                                <span class="field-content"><img  class="imagefield imagefield-field_banner_image" width="510" height="250" alt="" src="http://soulfoodcafemission.org/sites/default/files/banner-images/IMG_2300_0.jpg?1452139139" /></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="main-content-container" class="container-16 clearfix">
+                <div id="main-wrapper" class="column grid-16">
+                    <div id="main-inner-wrapper">
+                        <h2 class="title" id="page-title">{{ page_title }}</h2>
+                        <div id="main-content">
+                            {% block body %}{% endblock %}
+                        </div>
+
+                    </div> 
+                </div>
+            </div>
+            <div id="bottomRunner">
+                <div id="loginout"><p><a href="#">Admin</a></p></div></div> 
+        </div>
+    </body>
+</html>
