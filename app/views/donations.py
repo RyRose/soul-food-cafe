@@ -1,4 +1,6 @@
 from flask import Blueprint, render_template, redirect, session, flash, url_for
+from app.forms import VerifyForm
+
 
 donation = Blueprint('donation', __name__)
 
