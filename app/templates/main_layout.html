@@ -21,12 +21,17 @@
             <li class="menu-650 menu-path-node-15 odd "><a href="#" title="The Process">The Process</a></li>
             <li class="menu-652 menu-path-node-20 even "><a href="#" title="Donate">Donate</a></li>
             <li class="menu-753 menu-path-node-52 odd "><a href="#" title="Partner&#039;s Plan">Partner</a></li>
-            <li class="menu-800 menu-path-node-10 even">
+ 	     <li class="menu-800 menu-path-node-10 even">
+		{% if not session.username %}
                 <a href="login">Login</a>
+		{% else %}
+		 <a href=“login”>Logout</a>
+		{% endif %}
             </li>
-            <li class="menu-800 menu-path-node-10 odd last"><a href="donations">Donations</a></li>
+            <li class="menu-800 menu-path-node-10 odd last"><a href="donations">Donations</a></li> 
+	     </li>           
         </ul>
-    </div>
+    </div>s
 </div>
 {% endblock %}
 
