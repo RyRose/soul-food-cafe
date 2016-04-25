@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Soul Food Café Mission</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+        <!-- SFCM -->
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/original_site.css') }}" />
+        <script src="{{ url_for('static', filename='js/original_site.js') }}"></script>
+        <link href='https://fonts.googleapis.com/css?family=Rosario' rel='stylesheet' type='text/css'>
+
+        <!-- Hendrix -->
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/site.css') }}" />
+
+        <!-- I know, the below is a duplicate. This fixes some of the overrides in the SFCM js file that mess with jQuery> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+        {% block head %}{% endblock %}
+    </head>
+
+    <body class="front node-type-page no-sidebars">
+        <div id="page" class="clearfix">
+            {% block site_header %}{% endblock %}
+            {% block banner %}{% endblock %}
+            <div id="main-content-container" class="container-16 clearfix">
+                <div id="main-wrapper" class="column grid-16">
+                    <div id="main-inner-wrapper">
+                        <h2 class="title" id="page-title">{{ page_title }}</h2>
+                        <div id="main-content">
+                            {% block body %}{% endblock %}
+                        </div>
+
+                    </div> 
+                </div>
+            </div>
+            {% block site_footer %}{% endblock %}
+        </div>
+    </body>
+</html>

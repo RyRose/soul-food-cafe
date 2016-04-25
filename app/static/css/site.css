@@ -1,11 +1,4 @@
-#nice-menu-0 li {
-    text-decoration: line-through;
-}
-
 #nice-menu-0 li a {
-    font-size: 16px;
+    font-size: 14px;
 }
 
-#nice-menu-0 li:last-child {
-    text-decoration: none;
-}

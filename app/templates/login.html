@@ -11,9 +11,10 @@ Use <strong>admin</strong> for username and <strong>admin</strong> for password.
 {% endif %}
 <form action="login" method="POST" name="login">
     <h4>Username</h4>
-    <input type="text" name="username">
+    {{ form.username }}
     <h4>Password</h4>
-    <input type="password" name="password">
+    {{ form.password }}
+    {{ form.csrf_token }}
     <input id="submit_info" type="submit" name="Sign In"> Don't have an account? <a href="register">Register here.</a>
 </form>
 {% endblock %}
