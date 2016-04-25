@@ -11,7 +11,7 @@ def donations():
         flash("Please login.")
         return redirect(url_for('auth.login'))
         
-@donation.route("/donations/add", methods = ['GET', 'POST']))
+@donation.route("/donations/add", methods = ['GET', 'POST'])
 def verify():
     form = VerifyForm()
     if 'username' in session:
