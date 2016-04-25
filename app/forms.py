@@ -18,3 +18,5 @@ class VerifyForm(Form):
 	name = TextField('Name', [validators.InputRequired()])
 	brand = TextField('Brand', [validators.InputRequired()])
 	weight = TextField('Weight', [validators.InputRequired()])
+	quantity = TextField('Quantity', [validators.InputRequired()])
+	date = TextField('Date', [validators.InputRequired()])
