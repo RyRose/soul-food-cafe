@@ -10,3 +10,13 @@ def donations():
     else:
         flash("Please login.")
         return redirect(url_for('auth.login'))
+        
+@donation.route("/donations/add", methods = ['GET', 'POST']))
+def verify():
+    form = VerifyForm()
+    if 'username' in session:
+        # TODO: Add stuff from database
+        return render_template("verify.html", page_title="Add Products", name=session['username'])
+    else:
+        flash("Please login.")
+        return redirect(url_for('auth.login'))
