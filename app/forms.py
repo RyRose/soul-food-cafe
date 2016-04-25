@@ -13,3 +13,8 @@ class RegisterForm(Form):
         validators.EqualTo('confirm', message='Passwords must match') ]
         )
     confirm = PasswordField('Repeat Password')
+    
+class VerifyForm(Form):
+	name = TextField('Name', [validators.InputRequired()])
+	brand = TextField('Brand', [validators.InputRequired()])
+	weight = TextField('Weight', [validators.InputRequired()])
