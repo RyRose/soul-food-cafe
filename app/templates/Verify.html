@@ -1,0 +1,13 @@
+{% extends "main_layout.html" %}
+
+{% block body %}
+<form action="verify" method="POST" name="verify">
+	<h4>Name</h4>
+	<input type="text" name="name">
+	<h4>Brand</h4>
+	<input type="text" name="brand">
+	<h4>Weight</h4>
+	<input type="text" name="weight">
+	<input type="submit" name="Verify" id="submit_info"> 
+</form>
+{% endblock %}
