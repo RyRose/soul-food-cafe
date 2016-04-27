@@ -1,5 +1,10 @@
-from app import app
 import config
+from app import app
 
 app.config.from_object(config)
-app.run()
+
+def main():
+    app.run()
+
+if __name__ == "__main__":
+    main()

@@ -6,13 +6,14 @@
 {% block body %}
 <form action="register" method="POST" name="register">
     <h4>Email Address</h4>
-    <input type="text" name="email">
+    {{ form.email }}
     <h4>Username</h4>
-    <input type="text" name="username">
+    {{ form.username }}
     <h4>Password</h4>
-    <input type="password" name="password">
+    {{ form.password }}
     <h4>Confirm Password</h4>
-    <input type="password" name="password_confirm">
+    {{ form.confirm_password }}
+    {{ form.csrf_token }}
     <input type="submit" name="Register" id="submit_info"> 
 </form>
 {% endblock %}

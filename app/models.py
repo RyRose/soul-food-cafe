@@ -1,29 +1,40 @@
 from datetime import datetime
 from app import db
 
+from werkzeug.security import generate_password_hash, \
+             check_password_hash
+
 class Donor(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.Text)
-    password = db.Column(db.Text, unique=True)
+    email = db.Column(db.Text, unique=True)
+    username = db.Column(db.Text)
+    password = db.Column(db.Integer, unique=True)
 
-    def __init__(self, email, password):
+    def check_password(self, password):
+        return check_password_hash(self.password, password)
+
+    def __init__(self, email, username, password):
         self.email = email
-        self.password = password
+        self.username = username
+        self.password = generate_password_hash(password)
 
     def __repr__(self):
-        return '<Donor %r>' % self.email
+        return '<Donor %r>' % self.username
 
 class Admin(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.Text)
-    password = db.Column(db.Text, unique=True)
+    password = db.Column(db.Integer, unique=True)
 
     def __init__(self, username, password):
         self.username = username
-        self.password = password
+        self.password = generate_password_hash(password)
 
     def __repr__(self):
         return "<Admin %r>" % self.username
+
+    def check_password(self, password):
+        return check_password_hash(self.password, password)
 
 class Donation(db.Model):
     id = db.Column(db.Integer, primary_key=True)

@@ -1,7 +1,6 @@
 from flask import Blueprint, render_template, redirect, session, flash, url_for
 from app.forms import VerifyForm
 
-
 donation = Blueprint('donation', __name__)
 
 @donation.route("/donations")
@@ -10,7 +9,7 @@ def donations():
         # TODO: Add stuff from database
         return render_template("donations.html", page_title="Donations", name=session['username'])
     else:
-        flash("Please login.")
+        flash("Sorry, you must first login to access your donations.")
         return redirect(url_for('auth.login'))
         
 @donation.route("/donations/add", methods = ['GET', 'POST'])
