@@ -21,7 +21,6 @@ def login():
 
     return render_template("login.html", page_title="Login", invalid=is_invalid, form=form)
 
-# TODO: Setup changing of login to logout whenever login state changes
 @auth.route("/logout")
 def logout():
     session.pop('username')
