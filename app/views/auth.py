@@ -1,27 +1,28 @@
 from flask import Blueprint, flash, abort, session, render_template, redirect, request, url_for
-from app.forms import LoginForm
+from app import db
+from app.forms import LoginForm, RegisterForm
+from app.forms import flash_errors
+from app.models import Donor
 
 auth = Blueprint('auth', __name__)
 
 @auth.route("/login", methods = ['GET', 'POST'])
 def login():
     form = LoginForm()
-    is_invalid = False
     if form.validate_on_submit():
         username = form.data["username"]
-        password = form.data["password"]
-
-        # TODO: Check with database if user is in it.
-        print(username, password)
-        if username == password == 'admin':
-            session['username'] = username
-            return redirect(url_for('donation.donations'))
+        donor = Donor.query.filter_by(username=username).first()
+        if donor is not None:
+            if donor.check_password(form.data["password"]):
+                session["username"] = username
+                return redirect(url_for("donation.donations"))
         else:
-            is_invalid = True
+            flash("Username does not exist. Please try again with a different username/password.")
+    else:
+        flash_errors(form)
 
-    return render_template("login.html", page_title="Login", invalid=is_invalid, form=form)
+    return render_template("login.html", page_title="Login", form=form)
 
-# TODO: Setup changing of login to logout whenever login state changes
 @auth.route("/logout")
 def logout():
     session.pop('username')
@@ -29,8 +30,20 @@ def logout():
 
 @auth.route("/register", methods = ['GET', 'POST'])
 def register():
-    if request.method == "POST":
-        # TODO: Add donator to database. Possibly setup email confirmation.
-        return redirect(url_for('login'))
+    form = RegisterForm()
+    if form.validate_on_submit():
+        email = form.data["email"]
+        username = form.data["username"]
+        password = form.data["password"]
+
+        if Donor.query.filter_by(username=username).first() == None:
+            donor = Donor(email, username, password)
+            db.session.add(donor)
+            db.session.commit()
+            return redirect(url_for('auth.login'))
+        else:
+            flash("Username already exists. Please choose a different username")
     else:
-        return render_template("register.html", page_title="Register")
+        flash_errors(form)
+
+    return render_template("register.html", page_title="Register", form=form)
