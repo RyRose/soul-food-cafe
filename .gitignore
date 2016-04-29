@@ -12,6 +12,8 @@ _mailinglist
 .cache/
 .idea/
 
+app.db
+
 *.swp
 
 # Byte-compiled / optimized / DLL files
