@@ -56,7 +56,7 @@ class Donation(db.Model):
         self.date = date
 
     def __repr__(self):
-        return "<Donation %d, %d, %d, %r>" % self.donor_id, self.item_id, self.quantity, self.date
+        return "<Donation %d, %d, %d, %r>" % self.donor_id, self.item_id, self.quantity, str(self.date)
 
 class Item(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -72,5 +72,5 @@ class Item(db.Model):
         self.brand = brand
 
     def __repr__(self):
-        return "<Item %r, %r, %r, %r>" % self.barcode, self.name, self.weight, self.brand
+        return "<Item>"
 

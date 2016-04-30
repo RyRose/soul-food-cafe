@@ -6,7 +6,7 @@
 
 <script type="text/javascript" >
 $(document).ready(function(){
-        $('#donation_table').DataTable();
+        $('.donation_table').DataTable();
 });
 </script>
 {% endblock %}
@@ -24,52 +24,6 @@ $(document).ready(function(){
     <a id="export_table" href="#">Export data to Excel</a>
 
     <!-- Center columns -->
-    <table id="donation_table" class="cell-border">
-        <thead> 
-            <tr>        
-                <th>Name</th>
-                <th>Date</th>
-                <th>Brand</th>
-                <th>Category</th>
-                <th>Quantity</th>
-                <th>Weight</th>
-            </tr>
-        </thead>
-        <tbody>
-              <tr>
-                      <td class="tg-031e">Soup</td>
-                          <td class="tg-031e">4/17/16</td>
-                              <td class="tg-031e">Campbell's</td>
-                                  <td class="tg-031e">Canned</td>
-                                      <td class="tg-031e">4</td>
-                                          <td class="tg-031e">2</td>
-                                            </tr>
-                                              <tr>
-                                                      <td class="tg-yw4l">Milk</td>
-                                                          <td class="tg-yw4l">4/18/16</td>
-                                                              <td class="tg-yw4l">Hiland</td>
-                                                                  <td class="tg-yw4l">Jug</td>
-                                                                      <td class="tg-yw4l">2</td>
-                                                                          <td class="tg-yw4l">8.6</td>
-                                                                            </tr>
-                                                                              <tr>
-                                                                                      <td class="tg-yw4l">Mac &amp; Cheese</td>
-                                                                                          <td class="tg-yw4l">4/19/16</td>
-                                                                                              <td class="tg-yw4l">Kraft</td>
-                                                                                                  <td class="tg-yw4l">Box</td>
-                                                                                                      <td class="tg-yw4l">5</td>
-                                                                                                          <td class="tg-yw4l">2</td>
-                                                                                                            </tr>
-                                                                                                              <tr>
-                                                                                                                      <td class="tg-yw4l">Rice Crispy Treats</td>
-                                                                                                                          <td class="tg-yw4l">4/20/16</td>
-                                                                                                                              <td class="tg-yw4l">Kellog</td>
-                                                                                                                                  <td class="tg-yw4l">Box</td>
-                                                                                                                                      <td class="tg-yw4l">3</td>
-                                                                                                                                          <td class="tg-yw4l">1</td>
-                                                                                                                                            </tr>
-
-            <tbody>
-    </table>
+    {{ table }}
 </div>	
 {% endblock %}
