@@ -72,5 +72,5 @@ class Item(db.Model):
         self.brand = brand
 
     def __repr__(self):
-        return "<Item>"
+        return "<Item %r, %r, %r, %r>" % self.name, self.barcode, str(self.weight), self.brand
 

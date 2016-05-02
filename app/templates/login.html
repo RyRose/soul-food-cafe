@@ -11,6 +11,9 @@
     <h4>Password</h4>
     {{ form.password }}
     {{ form.csrf_token }}
-    <input id="submit_info" type="submit" name="Sign In"> Don't have an account? <a href="register">Register here.</a>
+    <input id="submit_info" type="submit" name="Sign In"> 
+    {% if not admin %}
+    Don't have an account? <a href="register">Register here.</a>
+    {% endif %}
 </form>
 {% endblock %}

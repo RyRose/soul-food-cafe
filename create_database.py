@@ -1,5 +1,5 @@
 import runserver
-from app import db
 from app.models import *
+from app import db
 
 db.create_all()
