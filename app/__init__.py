@@ -13,3 +13,5 @@ app.register_blueprint(donation)
 @app.route("/")
 def index():
     return render_template("index.html", page_title="Lorem")
+
+from app import models
