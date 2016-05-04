@@ -2,6 +2,8 @@ from flask import Blueprint, render_template, redirect, session, flash, url_for
 from flask_table import Table, Col, DateCol
 from app.forms import VerifyForm
 from app.models import Donation, Donor
+from flask import Flask, request, jsonify
+from flask.ext import excel
 
 donation = Blueprint('donation', __name__)
 
@@ -52,13 +54,25 @@ def donations():
     else:
         flash("Sorry, you must first login to access your donations.")
         return redirect(url_for('auth.login'))
-        
+
 @donation.route("/donations/add", methods = ['GET', 'POST'])
 def verify():
     form = VerifyForm()
     if 'is_admin' in session:
         # TODO: Add stuff from database
+        
         return render_template("verify.html", page_title="Add Products", name=session['username'])
     else:
         flash("Please login.")
         return redirect(url_for('auth.admin_login'))
+
+"new"
+
+
+@donation.route("/download", methods=['GET'])
+def download_file():
+    return excel.make_response_from_array([[1,2], [3, 4]], "csv")
+
+@donation.route("/export", methods=['GET'])
+def export_records():
+    return excel.make_response_from_array([[1,2], [3, 4]], "csv", file_name="export_data")

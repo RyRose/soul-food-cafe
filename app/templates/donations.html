@@ -13,15 +13,15 @@ $(document).ready(function(){
 
 {% block body %}<div id="node-page-2" >
 
-    <strong>Hello {{ name }}!</strong> 
-    
+    <strong>Hello {{ name }}!</strong>
+
     <br />
-    
+
     Your donations for the week of <strong>4/17/16 - 4/23/16:</strong>
 
     <br /> <!-- <- Delete. crap style, use css -->
 
-    <a id="export_table" href="#">Export data to Excel</a>
+    <a id="export_table" href="/export">Export data to Excel</a>
 
     <!-- Center columns -->
     {{ table }}
@@ -29,5 +29,5 @@ $(document).ready(function(){
     {% if admin %}
     <strong>TODO!!!! - Add link to add donations via scanning here!</strong>
     {% endif %}
-</div>	
+</div>
 {% endblock %}
