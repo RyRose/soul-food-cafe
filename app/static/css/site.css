@@ -1,5 +1,5 @@
 #nice-menu-0 li a {
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .flashes {
@@ -10,7 +10,8 @@
 .flashes li {
     color: white;
     font-size: 20px;
-    text-align:left;
+    text-align: left;
+    text-indent: 125px; 
     display: block;
 }
 
