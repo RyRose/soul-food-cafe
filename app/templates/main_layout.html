@@ -4,10 +4,10 @@
 <div id="site-header" class="container-16 clearfix">
     <div id="directors">
         <span class="dName">TEST</span>
-    </div> 
+    </div>
     <div id="branding" class="grid-4">
-        <div id="logo"> 
-            <a href="/" class="active"><img src="{{ url_for('static', filename='images/logo.png')  }}" alt="Soul Food Café Mission" title="Soul Food Café Mission" width="583" height="91" /></a>        
+        <div id="logo">
+            <a href="/" class="active"><img src="{{ url_for('static', filename='images/logo.png')  }}" alt="Soul Food Café Mission" title="Soul Food Café Mission" width="583" height="91" /></a>
         </div>
     </div>
     <div>
@@ -21,15 +21,14 @@
             <li class="menu-650 menu-path-node-15 odd "><a href="http://www.soulfoodcafemission.org/process" title="The Process">The Process</a></li>
             <li class="menu-652 menu-path-node-20 even "><a href="http://www.soulfoodcafemission.org/donate" title="Donate">Donate</a></li>
             <li class="menu-753 menu-path-node-52 odd "><a href="http://www.soulfoodcafemission.org/partners-plan" title="Partner&#039;s Plan">Partner</a></li>
- 	     <li class="menu-800 menu-path-node-10 even">
-		{% if not session.username %}
-                <a href='/login'>Login</a>
-		{% else %}
-		 <a href='/logout'>Logout</a>
-		{% endif %}
+ 	          <li class="menu-800 menu-path-node-10 even">
+		            {% if not session.username %}
+                  <a href='/login'>Login</a>
+		            {% else %}
+		              <a href='/logout'>Logout</a>
+		            {% endif %}
             </li>
-            <li class="menu-800 menu-path-node-10 odd last"><a href="/donations">Donations</a></li> 
-	     </li>           
+            <li class="menu-800 menu-path-node-10 odd last"><a href="/donations">Donations</a></li>           
         </ul>
     </div>
 </div>
@@ -72,6 +71,5 @@
     <div id="loginout">
         <p><a href="/admin/login">Admin</a></p>
     </div>
-</div> 
+</div>
 {% endblock %}
-
