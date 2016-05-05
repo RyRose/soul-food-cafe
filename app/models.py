@@ -19,7 +19,7 @@ class Donor(db.Model):
         self.password = generate_password_hash(password)
 
     def __repr__(self):
-        return '<Donor %r>' % self.username
+        return '<Donor {}: {}, {}>'.format(self.id, self.username, self.email)
 
 class Admin(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -31,7 +31,7 @@ class Admin(db.Model):
         self.password = generate_password_hash(password)
 
     def __repr__(self):
-        return "<Admin %r>" % self.username
+        return "<Admin {}: {}>".format(self.id, self.username)
 
     def check_password(self, password):
         return check_password_hash(self.password, password)
@@ -56,7 +56,7 @@ class Donation(db.Model):
         self.date = date
 
     def __repr__(self):
-        return "<Donation %d, %d, %d, %r>" % self.donor_id, self.item_id, self.quantity, str(self.date)
+        return "<Donation {}: {}, {}, {}, {}>".format(self.id, self.quantity, self.date, self.item, self.donor)
 
 class Item(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -72,5 +72,5 @@ class Item(db.Model):
         self.brand = brand
 
     def __repr__(self):
-        return "<Item %r, %r, %r, %r>" % self.name, self.barcode, str(self.weight), self.brand
+        return "<Item {}: {}, {}, {}, {}>".format(self.id, self.name, self.barcode, self.weight, self.brand)
 
