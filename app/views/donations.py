@@ -55,7 +55,7 @@ def donations():
         flash("Sorry, you must first login to access your donations.")
         return redirect(url_for('auth.login'))
 
-@donation.route("/donations/verify", methods = ['GET', 'POST'])
+@donation.route("/donations/add", methods = ['GET', 'POST'])
 def verify():
     form = VerifyForm()
     if 'is_admin' in session:
