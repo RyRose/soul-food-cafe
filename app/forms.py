@@ -25,8 +25,8 @@ class RegisterForm(Form):
     confirm_password = PasswordField('Confirm Password')
     
 class VerifyForm(Form):
-	name = TextField('Name', [validators.InputRequired()])
-	brand = TextField('Brand', [validators.InputRequired()])
-	weight = TextField('Weight', [validators.InputRequired()])
-	quantity = TextField('Quantity', [validators.InputRequired()])
-	date = TextField('Date', [validators.InputRequired()])
+    name = TextField('Name', [validators.InputRequired()])
+    brand = TextField('Brand', [validators.InputRequired()])
+    weight = TextField('Weight', [validators.InputRequired()])
+    quantity = TextField('Quantity', [validators.InputRequired()])
+    date = TextField('Date', [validators.InputRequired()])
