@@ -39,11 +39,11 @@ class Admin(db.Model):
 class Donation(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     donor_id = db.Column(db.Integer, db.ForeignKey("donor.id"))
-    donor = db.relationship('Donor',
-                    backref=db.backref('donations'))
+
+    donor = db.relationship('Donor',backref=db.backref('donations'))
     item_id = db.Column(db.Integer, db.ForeignKey('item.id'))
-    item = db.relationship('Item',
-                    backref=db.backref('donations'))
+
+    item = db.relationship('Item',backref=db.backref('donations'))
     quantity = db.Column(db.Integer)
     date = db.Column(db.DateTime)
 
@@ -73,4 +73,3 @@ class Item(db.Model):
 
     def __repr__(self):
         return "<Item {}: {}, {}, {}, {}>".format(self.id, self.name, self.barcode, self.weight, self.brand)
-
