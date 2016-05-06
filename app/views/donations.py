@@ -4,6 +4,8 @@ from app.forms import VerifyForm
 from app.models import Donation, Donor, Item
 from flask import Flask, request, jsonify
 from flask.ext import excel
+from datetime import datetime
+from app import db
 
 donation = Blueprint('donation', __name__)
 
@@ -62,16 +64,9 @@ def verify():
             if form.validate_on_submit():
 
                 # TODO: Add stuff from database
-
                 donor = form.data['donor']
-                name = form.data['name']
-                weight = form.data['weight']
-                brand = form.data['brand']
-                quantity = request.form['quantity']
-                date = request.form['date']
-
-            item = Item.query.filter_by(name=name, weight=weight, brand=brand, quantity=quantity, date=date).first()
-            if item is not None:
+                barcode = form.data['barcode']
+                redirect(url_for("donation.manual/" + donor + "/" + barcode))
 
             return render_template("verify.html", page_title="Add Products", name=session['username'])
 
@@ -81,7 +76,36 @@ def verify():
             flash("Please login.")
             return redirect(url_for('auth.admin_login'))
 
-"new"
+
+@donation.route("/donations/add/<donor>/<barcode>", methods = ['GET', 'POST'])
+def manual(donor, barcode):
+    if 'is_admin' in session:
+        form = VerifyForm()
+        if request.method == 'GET':
+            item = Item.query.filter_by(barcode=barcode).first()
+            if item is not None:
+                form.data['donor'] = donor
+                form.data['name'] = Item.name
+                form.data['weight'] = Item.weight
+                form.data['brand'] = Item.brand
+                form.data['date'] = datetime.utcnow()
+            else:
+                form.data['donor'] = donor
+                form.data['date'] = datetime.utcnow()
+        if form.validate_on_submit():
+            item = Item.query.filter_by(barcode=barcode).first()
+            donor = Donor.query.filter_by(username=donor).first()
+            if item is None:
+                item = Item(barcode, form.data["name"],form.data["weight"], form.data["brand"])
+            donation = Donation(item, donor, form.data["quantity"], form.data['date'])
+            db.session.add(donation)
+            db.session.commit()
+
+        return render_template("verify.html", page_title="Add Products", name=session['username'])
+
+    else:
+        flash("Please login.")
+        return redirect(url_for('auth.admin_login'))
 
 
 @donation.route("/download", methods=['GET'])
