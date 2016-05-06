@@ -60,7 +60,7 @@ def verify():
     form = VerifyForm()
     if 'is_admin' in session:
         # TODO: Add stuff from database
-        
+
         return render_template("verify.html", page_title="Add Products", name=session['username'])
     else:
         flash("Please login.")
@@ -68,11 +68,11 @@ def verify():
 
 "new"
 
+def make_donation_list(donation):
+    return [donation.item.name, donation.item.brand, donation.item.weight]
 
 @donation.route("/download", methods=['GET'])
 def download_file():
-    return excel.make_response_from_array([[1,2], [3, 4]], "csv")
-
-@donation.route("/export", methods=['GET'])
-def export_records():
-    return excel.make_response_from_array([[1,2], [3, 4]], "csv", file_name="export_data")
+    donations = Donation.query.all()
+    donations = [ make_donation_list(donation) for donation in donations]
+    return excel.make_response_from_array(donations, "csv", file_name="export_data")

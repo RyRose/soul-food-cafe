@@ -50,7 +50,7 @@ def logout():
     session.pop('username')
     if "is_admin" in session:
         session.pop("is_admin")
-    flash("You just logged out")
+        flash("You just logged out")
     return redirect(url_for("index"))
 
 @auth.route("/register", methods = ['GET', 'POST'])
