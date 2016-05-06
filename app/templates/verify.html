@@ -2,7 +2,7 @@
 
 {% block body %}
 <form action="verify" method="POST" name="verify">
-	{% if is_adding %}
+	{% if adding %}
     <input type="button" name="back" id="go_back1">
 	<h4>Name</h4>
 	{{ form.name }}
@@ -15,8 +15,8 @@
 	<h4>Date</h4>
 	{{ form.date }}
 	<input type="submit" name="Verify" id="submit_info1">
-
 	{% else %}
+
     <input type="button" name="back" id="go_back2">
 	<h4>Donor</h4>
 	{{ form.donor }}

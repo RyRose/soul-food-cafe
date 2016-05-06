@@ -27,7 +27,6 @@ def login():
 def admin_login():
     if "is_admin" in session and session["is_admin"]:
         return redirect(url_for("donation.donations"))
-
     form = LoginForm()
     if form.validate_on_submit():
         username = form.data["username"]
@@ -41,7 +40,6 @@ def admin_login():
             flash("Username does not exist. Please try again with a different username/password.")
     else:
         flash_errors(form)
-
     return render_template("login.html", page_title="Administrative Login", form=form, admin=True)
 
 

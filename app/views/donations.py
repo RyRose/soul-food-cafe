@@ -62,16 +62,12 @@ def verify():
         if 'is_admin' in session:
             form = VerifyForm()
             if form.validate_on_submit():
-
                 # TODO: Add stuff from database
                 donor = form.data['donor']
                 barcode = form.data['barcode']
-                redirect(url_for("donation.manual/" + donor + "/" + barcode))
+                redirect(url_for("donation.add/" + donor + "/" + barcode))
 
-            return render_template("verify.html", page_title="Add Products", name=session['username'])
-
-
-
+            return render_template("verify.html", page_title="Add Products", form = form, is_adding=False)
         else:
             flash("Please login.")
             return redirect(url_for('auth.admin_login'))
@@ -92,6 +88,7 @@ def manual(donor, barcode):
             else:
                 form.data['donor'] = donor
                 form.data['date'] = datetime.utcnow()
+            return render_template("verify.html", page_title="Add Products", form=form, adding=True)
         if form.validate_on_submit():
             item = Item.query.filter_by(barcode=barcode).first()
             donor = Donor.query.filter_by(username=donor).first()
@@ -101,8 +98,8 @@ def manual(donor, barcode):
             db.session.add(donation)
             db.session.commit()
             return redirect(url_for("donation.verify"))
-
-        return render_template("verify.html", page_title="Add Products", form=form, is_adding=True)
+        else:
+            return render_template("verify.html", page_title="Add Products", form=form, adding=True)
 
     else:
         flash("Please login.")
