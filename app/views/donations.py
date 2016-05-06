@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, redirect, session, flash, url_for
 from flask_table import Table, Col, DateCol
 from app.forms import VerifyForm
-from app.models import Donation, Donor
+from app.models import Donation, Donor, Item
 from flask import Flask, request, jsonify
 from flask.ext import excel
 
@@ -57,35 +57,26 @@ def donations():
 
 @donation.route("/donations/add", methods = ['GET', 'POST'])
 def verify():
-    form = VerifyForm()
-    if 'is_admin' in session:
-        # TODO: Add stuff from database
-        if request.method == 'POST':
-            try:
+        if 'is_admin' in session:
+        form = VerifyForm()
+        if form.validate_on_submit():
+
+            # TODO: Add stuff from database
+            if request.method == 'POST':
                 donor = request.form['donor']
-                name = request.form['name']
-                weight = request.form['weight']
-                brand = request.form['brand']
-                quantity = request.form['quantity']
-                date = request.form['date']
+            name = request.form['name']
+            weight = request.form['weight']
+            brand = request.form['brand']
+            quantity = request.form['quantity']
+            date = request.form['date']
 
-                with sql.connect("app.db") as con:
-                    cur = con.cursor()
+            item = Item.query.filter_by(name=name, weight=weight, brand=brand, quantity=quantity, date=date).first()
+            if item is not None:
 
-                    cur.execute("INSERT INTO AdminDonationRow (donor, name, weight, brand, quantity, date) VALUES(?, ?, ?, ?, ?, ?)",(donor, name, weight, brand, quantity, date) )
-
-                    con.commit()
-                    msg = "Record successfully added"
-            except:
-                con.rollback()
-                msg = "error in insert operation"
-
-            ##finally:
-            ##    return render_template("verify.html", msg=msg)
-            ##    con.close()
+            return render_template("verify.html", page_title="Add Products", name=session['username'])
 
 
-        return render_template("verify.html", page_title="Add Products", name=session['username'])
+
     else:
         flash("Please login.")
         return redirect(url_for('auth.admin_login'))
