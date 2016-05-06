@@ -58,17 +58,17 @@ def donations():
 @donation.route("/donations/add", methods = ['GET', 'POST'])
 def verify():
         if 'is_admin' in session:
-        form = VerifyForm()
-        if form.validate_on_submit():
+            form = VerifyForm()
+            if form.validate_on_submit():
 
-            # TODO: Add stuff from database
-            if request.method == 'POST':
-                donor = request.form['donor']
-            name = request.form['name']
-            weight = request.form['weight']
-            brand = request.form['brand']
-            quantity = request.form['quantity']
-            date = request.form['date']
+                # TODO: Add stuff from database
+
+                donor = form.data['donor']
+                name = form.data['name']
+                weight = form.data['weight']
+                brand = form.data['brand']
+                quantity = request.form['quantity']
+                date = request.form['date']
 
             item = Item.query.filter_by(name=name, weight=weight, brand=brand, quantity=quantity, date=date).first()
             if item is not None:
@@ -77,9 +77,9 @@ def verify():
 
 
 
-    else:
-        flash("Please login.")
-        return redirect(url_for('auth.admin_login'))
+        else:
+            flash("Please login.")
+            return redirect(url_for('auth.admin_login'))
 
 "new"
 
