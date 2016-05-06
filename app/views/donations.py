@@ -60,6 +60,30 @@ def verify():
     form = VerifyForm()
     if 'is_admin' in session:
         # TODO: Add stuff from database
+        if request.method == 'POST':
+            try:
+                donor = request.form['donor']
+                name = request.form['name']
+                weight = request.form['weight']
+                brand = request.form['brand']
+                quantity = request.form['quantity']
+                date = request.form['date']
+
+                with sql.connect("app.db") as con:
+                    cur = con.cursor()
+
+                    cur.execute("INSERT INTO AdminDonationRow (donor, name, weight, brand, quantity, date) VALUES(?, ?, ?, ?, ?, ?)",(donor, name, weight, brand, quantity, date) )
+
+                    con.commit()
+                    msg = "Record successfully added"
+            except:
+                con.rollback()
+                msg = "error in insert operation"
+
+            ##finally:
+            ##    return render_template("verify.html", msg=msg)
+            ##    con.close()
+
 
         return render_template("verify.html", page_title="Add Products", name=session['username'])
     else:
@@ -68,11 +92,11 @@ def verify():
 
 "new"
 
-def make_donation_list(donation):
-    return [donation.item.name, donation.item.brand, donation.item.weight]
 
 @donation.route("/download", methods=['GET'])
 def download_file():
-    donations = Donation.query.all()
-    donations = [ make_donation_list(donation) for donation in donations]
-    return excel.make_response_from_array(donations, "csv", file_name="export_data")
+    return excel.make_response_from_array([[1,2], [3, 4]], "csv")
+
+@donation.route("/export", methods=['GET'])
+def export_records():
+    return excel.make_response_from_array([[1,2], [3, 4]], "csv", file_name="export_data")
