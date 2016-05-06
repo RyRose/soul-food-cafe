@@ -12,7 +12,7 @@ _mailinglist
 .cache/
 .idea/
 
-*.db
+/app.db
 
 *.swp
 
