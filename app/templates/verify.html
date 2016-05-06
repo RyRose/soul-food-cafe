@@ -5,23 +5,23 @@
 	{% if adding %}
     <input type="button" name="back" id="go_back1">
 	<h4>Name</h4>
-	<input type="text" name="name">
+	{{ form.name }}
 	<h4>Brand</h4>
-	<input type="text" name="brand">
+	{{ form.brand }}
 	<h4>Weight</h4>
-	<input type="text" name="weight">
+	{{ form.weight }}
 	<h4>Quantity</h4>
-	<input type="text" name="quantity">
+	{{ form.quantity }}
 	<h4>Date</h4>
-	<input type="text" name="date">
+	{{ form.date }}
 	<input type="submit" name="Verify" id="submit_info1">
 
 	{% else %}
     <input type="button" name="back" id="go_back2">
 	<h4>Donor</h4>
-	<input type="text" name="donor">
+	{{ form.donor }}
 	<h4>Barcode</h4>
-	<input type="text" name="barcode">
+	{{ form.barcode }}
 	<input type="submit" name="Verify" id="submit_info2">
 	{% endif %}
 
