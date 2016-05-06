@@ -1,6 +1,6 @@
 from flask import flash
 
-from wtforms import BooleanField, TextField, PasswordField, validators
+from wtforms import BooleanField, TextField, PasswordField, validators, StringField
 from flask_wtf import Form
 
 def flash_errors(form):
@@ -23,9 +23,14 @@ class RegisterForm(Form):
         validators.EqualTo('confirm_password', message='Passwords must match') ]
         )
     confirm_password = PasswordField('Confirm Password')
+
+class ScanningForm(Form):
+    donor = StringField("Donor", [validators.InputRequired()])
+    barcode = StringField("Barcode", [validators.InputRequired()])
     
 class VerifyForm(Form):
-    donor = TextField('Donor', [validators.InputRequired()])
+    donor = StringField("Donor", [validators.InputRequired()])
+    barcode = StringField("Barcode", [validators.InputRequired()])
     name = TextField('Name', [validators.InputRequired()])
     brand = TextField('Brand', [validators.InputRequired()])
     weight = TextField('Weight', [validators.InputRequired()])

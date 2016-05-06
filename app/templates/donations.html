@@ -28,7 +28,9 @@ $(document).ready(function(){
     {{ table }}
 
     {% if admin %}
-    <strong>TODO!!!! - Add link to add donations via scanning here!</strong>
+    <form action="donations/add">
+        <input type="submit" value="Add Donations" >
+    </form>
     {% endif %}
 </div>
 {% endblock %}

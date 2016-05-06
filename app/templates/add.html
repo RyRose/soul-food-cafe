@@ -1,0 +1,41 @@
+{% extends "main_layout.html" %}
+
+{% block body %}
+<form action="/donations">
+    <input type="submit" value="Return to Donations" >
+</form>
+
+<br />
+
+<form action="add" method="POST" name="verify">
+
+    {{ form.csrf_token }}
+
+	{% if scanning %}
+        <h4>Donor</h4>
+        {{ form.donor }}
+        <h4>Barcode</h4>
+        {{ form.barcode }}
+    {% else %}
+        <h4>Donor</h4>
+        {{ form.donor }}
+        <h4>Barcode</h4>
+        {{ form.barcode }}
+        <h4>Name</h4>
+        {{ form.name }}
+        <h4>Brand</h4>
+        {{ form.brand }}
+        <h4>Weight</h4>
+        {{ form.weight }}
+        <h4>Quantity</h4>
+        {{ form.quantity }}
+        <h4>Date</h4>
+        {{ form.date }}
+	{% endif %}
+
+    <br /><br />
+
+	<input type="submit" name="Verify" id="submit_info">
+</form>
+{% endblock %}
+

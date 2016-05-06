@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, redirect, session, flash, url_for
 from flask_table import Table, Col, DateCol
-from app.forms import VerifyForm
+from app.forms import VerifyForm, ScanningForm, flash_errors
 from app.models import Donation, Donor, Item
 from flask import Flask, request, jsonify
 from flask.ext import excel
@@ -58,16 +58,17 @@ def donations():
         return redirect(url_for('auth.login'))
 
 @donation.route("/donations/add", methods = ['GET', 'POST'])
-def verify():
+def scanning():
         if 'is_admin' in session:
-            form = VerifyForm()
+            form = ScanningForm()
             if form.validate_on_submit():
-                # TODO: Add stuff from database
                 donor = form.data['donor']
                 barcode = form.data['barcode']
-                redirect(url_for("donation.add/" + donor + "/" + barcode))
+                return redirect(url_for("donation.manual", donor=donor,barcode=barcode))
+            else:
+                flash_errors(form)
 
-            return render_template("verify.html", page_title="Add Products", form = form, is_adding=False)
+            return render_template("add.html", page_title="Add Products", form = form, scanning=True)
         else:
             flash("Please login.")
             return redirect(url_for('auth.admin_login'))
@@ -78,38 +79,39 @@ def manual(donor, barcode):
     if 'is_admin' in session:
         form = VerifyForm()
         if request.method == 'GET':
+            print(barcode)
             item = Item.query.filter_by(barcode=barcode).first()
             if item is not None:
-                form.data['donor'] = donor
-                form.data['name'] = Item.name
-                form.data['weight'] = Item.weight
-                form.data['brand'] = Item.brand
-                form.data['date'] = datetime.utcnow()
-            else:
-                form.data['donor'] = donor
-                form.data['date'] = datetime.utcnow()
-            return render_template("verify.html", page_title="Add Products", form=form, adding=True)
+                form.name.data = item.name
+                form.weight.data = item.weight
+                form.brand.data = item.brand
+            form.donor.data = donor
+            form.barcode.data = barcode
+            form.date.data = datetime.now()
+            return render_template("add.html", page_title="Add Products", form=form, scanning=False)
+
         if form.validate_on_submit():
-            item = Item.query.filter_by(barcode=barcode).first()
-            donor = Donor.query.filter_by(username=donor).first()
+            item = Item.query.filter_by(barcode=form.data["barcode"]).first()
+            donor = Donor.query.filter_by(username=form.data["donor"]).first()
             if item is None:
-                item = Item(barcode, form.data["name"],form.data["weight"], form.data["brand"])
-            donation = Donation(item, donor, form.data["quantity"], form.data['date'])
+                item = Item(form.data["barcode"], form.data["name"], form.data["weight"], form.data["brand"])
+            donation = Donation(item, donor, form.data["quantity"], datetime.strptime(form.data['date'], "%Y-%m-%d %H:%M:%S.%f"))
             db.session.add(donation)
             db.session.commit()
-            return redirect(url_for("donation.verify"))
+            return redirect(url_for("donation.scanning"))
         else:
-            return render_template("verify.html", page_title="Add Products", form=form, adding=True)
+            flash_errors(form)
+            return render_template("add.html", page_title="Add Products", form=form, scanning=False)
 
     else:
         flash("Please login.")
         return redirect(url_for('auth.admin_login'))
 
+def make_donation_list(donation):       
+    return [donation.item.name, donation.item.brand, donation.item.weight]
 
 @donation.route("/download", methods=['GET'])
 def download_file():
-    return excel.make_response_from_array([[1,2], [3, 4]], "csv")
-
-@donation.route("/export", methods=['GET'])
-def export_records():
-    return excel.make_response_from_array([[1,2], [3, 4]], "csv", file_name="export_data")
+    donations = Donation.query.all()
+    donations = [ make_donation_list(donation) for donation in donations]
+    return excel.make_response_from_array(donations, "csv", file_name="export_data")
