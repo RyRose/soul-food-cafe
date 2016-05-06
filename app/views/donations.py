@@ -100,8 +100,9 @@ def manual(donor, barcode):
             donation = Donation(item, donor, form.data["quantity"], form.data['date'])
             db.session.add(donation)
             db.session.commit()
+            return redirect(url_for("donation.verify"))
 
-        return render_template("verify.html", page_title="Add Products", name=session['username'])
+        return render_template("verify.html", page_title="Add Products", form=form, is_adding=True)
 
     else:
         flash("Please login.")
