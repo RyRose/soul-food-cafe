@@ -25,6 +25,7 @@ class RegisterForm(Form):
     confirm_password = PasswordField('Confirm Password')
     
 class VerifyForm(Form):
+    donor = TextField('Donor', [validators.InputRequired()])
     name = TextField('Name', [validators.InputRequired()])
     brand = TextField('Brand', [validators.InputRequired()])
     weight = TextField('Weight', [validators.InputRequired()])

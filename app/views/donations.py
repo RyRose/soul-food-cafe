@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, redirect, session, flash, url_for
 from flask_table import Table, Col, DateCol
 from app.forms import VerifyForm
-from app.models import Donation, Donor
+from app.models import Donation, Donor, Item
 from flask import Flask, request, jsonify
 from flask.ext import excel
 
@@ -57,22 +57,37 @@ def donations():
 
 @donation.route("/donations/add", methods = ['GET', 'POST'])
 def verify():
-    form = VerifyForm()
-    if 'is_admin' in session:
-        # TODO: Add stuff from database
+        if 'is_admin' in session:
+            form = VerifyForm()
+            if form.validate_on_submit():
 
-        return render_template("verify.html", page_title="Add Products", name=session['username'])
-    else:
-        flash("Please login.")
-        return redirect(url_for('auth.admin_login'))
+                # TODO: Add stuff from database
+
+                donor = form.data['donor']
+                name = form.data['name']
+                weight = form.data['weight']
+                brand = form.data['brand']
+                quantity = request.form['quantity']
+                date = request.form['date']
+
+            item = Item.query.filter_by(name=name, weight=weight, brand=brand, quantity=quantity, date=date).first()
+            if item is not None:
+
+            return render_template("verify.html", page_title="Add Products", name=session['username'])
+
+
+
+        else:
+            flash("Please login.")
+            return redirect(url_for('auth.admin_login'))
 
 "new"
 
-def make_donation_list(donation):
-    return [donation.item.name, donation.item.brand, donation.item.weight]
 
 @donation.route("/download", methods=['GET'])
 def download_file():
-    donations = Donation.query.all()
-    donations = [ make_donation_list(donation) for donation in donations]
-    return excel.make_response_from_array(donations, "csv", file_name="export_data")
+    return excel.make_response_from_array([[1,2], [3, 4]], "csv")
+
+@donation.route("/export", methods=['GET'])
+def export_records():
+    return excel.make_response_from_array([[1,2], [3, 4]], "csv", file_name="export_data")

@@ -3,15 +3,13 @@
 }
 
 .flashes {
-    list-style: none;
-    margin-left: 18%;
+    text-indent: 12px;
 }
 
 .flashes li {
     color: white;
     font-size: 20px;
     text-align: left;
-    text-indent: 125px; 
     display: block;
 }
 
